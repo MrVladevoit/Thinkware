@@ -1,0 +1,24 @@
+//normalize
+@import "base/normalize";
+// variables,mixins,extends
+@import "helpers/helpers_all";
+
+// jquery plugins
+@import "plugins/slick";
+@import "plugins/slick-theme";
+
+//base
+@import "base/fonts";
+@import "base/header";
+@import "base/footer";
+@import "base/modals";
+
+//sections
+@import "sections/slider";
+@import "sections/products";
+@import "sections/recomendation";
+@import "sections/accessorys";
+@import "sections/video";
+@import "sections/about";
+@import "sections/advantages";
+@import "sections/contacts";

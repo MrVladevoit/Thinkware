@@ -41,6 +41,7 @@
     "gulp-zip": "^3.2.0",
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^4.2.2",
+    "jquery": "^3.1.0",
     "jshint": "^2.9.2",
     "multipipe": "^0.3.1",
     "postcss-assets": "^4.1.0",

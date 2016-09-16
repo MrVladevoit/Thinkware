@@ -1,0 +1,41 @@
+@mixin font_face($file_name,$font_name:$file_name,$path:$font_path,$weight:normal,$style:normal) {
+	@font-face {
+		font-family: quote($font_name);
+		src: url($path + $file-name + ".eot");
+		src: url($path + $file-name + ".eot?#iefix") format("embedded-opentype"), url($path + $file-name + ".woff") format("woff"), url($path + $file-name + ".ttf") format("truetype"), url($path + $file-name + ".svg##{$font_name}") format("svg");
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@mixin appearance($value: button) {
+	-moz-appearance: $value;
+	-webkit-appearance: $value;
+	appearance: $value;
+}
+
+@mixin flex_block($flex-direction : row, $flex-wrap: wrap, $content : space-between, $align-items : flex-start,$align-content : flex-start) {
+
+	display: flex;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+	justify-content: $content;
+	align-content: $align-content;
+	align-items: $align-items;
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+@mixin inline_block_wrapper {
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: -1px;
+}

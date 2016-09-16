@@ -1,0 +1,115 @@
+/* ==========================================================================
+   GP STUDIO
+   ========================================================================== */
+/**
+ *  1. Fonts
+ *  2. Colors
+ *  3. Buttons
+ *  4. Forms
+ *  5. Global
+ *  6.Z-index
+ *  7.TABLE
+ */
+
+/* 1. Fonts
+   ========================================================================== */
+
+$libre-font-path: "../fonts/libre/";
+$montserrat-font-path: "../fonts/montserrat/";
+
+$font-family: "Montserrat", Helvetica, Arial, sans-serif;
+$font-family-libre: "Libre", Helvetica, Arial, sans-serif;
+$font-family-montserrat: "Montserrat", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+
+$font-size-base: 14px;
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 26px;
+$font-size-h4: 22px;
+$font-size-h5: 18px;
+
+$line-height-base: 24px;
+$font-weight-base: 400;
+
+/* 2. Colors
+   ========================================================================== */
+
+$body-bg:#fff;
+$text-color: #42220b;
+$primary-color: #42240c;
+$secondary-color: #97c684;
+$third-color: #543622;
+$link-color: #42220b;
+$link-color-text: $secondary-color;
+$link-color-hover: #608b44;
+$white: #fff;
+$black: #000;
+$title-color: $primary-color;
+$title-color-2: #292929;
+$error: #e4798f;
+$text-color-blog: #513527;
+/* 3. Buttons
+   ========================================================================== */
+// default
+$button-height: auto;
+$button-width: auto;
+$button-radius: 0;
+$button-background: $primary-color;
+$button-background-hover: #fff;
+$button-color: #fff ;
+$button-color-hover: $primary-color;
+$button-border-width: 3px;
+$button-border-color: $primary-color;
+
+// lighten button
+$button-lighten-background: transparent;
+$button-lighten-background-hover: #fff;
+$button-lighten-color: #fff ;
+$button-lighten-color-hover: $primary-color;
+$button-lighten-border-width: 3px;
+$button-lighten-border-color: #fff;
+
+// // Disabled styles
+$button-disabled-background: #DFDFDF ;
+$button-disabled-color: #9F9F9F ;
+
+
+
+/* 4. Forms
+   ========================================================================== */
+
+$input-height:30px;
+$input_font_size:$font-size-base;
+$input-border-color:#ccc;
+$input-placeholder-color: $black;
+$input-text-color:$black;
+// $input_radius:;
+
+
+/* 5. Z-index
+   ========================================================================== */
+
+$z-index: (
+   popap : 9999,
+   header : 100,
+   footer : 100
+);
+
+/* 6. Media Points
+   ========================================================================== */
+
+// $point-1: 1200px;
+// $point-2: 1024px;
+// $point-3: 768px;
+// $point-4: 480px;
+// $point-5: 320px;
+
+
+/* 7. Table
+   ========================================================================== */
+$bg-thead:$primary-color;
+$color-thead:#fff;
+$bg-tbody:#efefef;
+$color-tbody:$primary-color;

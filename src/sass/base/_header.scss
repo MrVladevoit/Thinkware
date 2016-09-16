@@ -1,0 +1,53 @@
+/* ==========================================================================
+	 HEADER
+	 ========================================================================== */
+.header{
+	position:relative;
+	padding-top: 17px;
+	min-height: 133px;
+	border-bottom: 6px solid $secondary-color;
+	width:100%;
+	z-index: 1010;
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		left:0;
+		top:0;
+		width: 136px;
+		height: 132px;
+		background:url('../images/flower-left.png');
+		@media screen and (max-width: 1599px) {
+			left:-60px;
+		}
+		@media screen and (max-width: 1366px) {
+			display: none;
+		}
+	}
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		right:0;
+		top:0;
+		width: 136px;
+		height: 132px;
+		background:url('../images/flower-right.png');
+		visibility:visible;
+		@media screen and (max-width: 1599px) {
+			right:-60px;
+		}
+		@media screen and (max-width: 1366px) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		position: fixed;
+		z-index: 1010;
+		background: #fff;
+		min-height: 70px;
+		padding-top: 0px;
+		border-bottom: 2px solid #97c684;
+	}
+}
+/* end header */
