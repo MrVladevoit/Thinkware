@@ -14,42 +14,38 @@
 /* 1. Fonts
    ========================================================================== */
 
-$libre-font-path: "../fonts/libre/";
-$montserrat-font-path: "../fonts/montserrat/";
+$proxima-font-path: "../fonts/Proxima Nova Condensed/";
 
-$font-family: "Montserrat", Helvetica, Arial, sans-serif;
-$font-family-libre: "Libre", Helvetica, Arial, sans-serif;
-$font-family-montserrat: "Montserrat", Helvetica, Arial, sans-serif;
+
+$font-family: "ProximaNovaCond", Helvetica, Arial, sans-serif;
+$font-family-proxima: "ProximaNovaCond", Helvetica, Arial, sans-serif;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 
-$font-size-base: 14px;
-$font-size-h1: 36px;
-$font-size-h2: 30px;
-$font-size-h3: 26px;
-$font-size-h4: 22px;
-$font-size-h5: 18px;
+$font-size-base: 16px;
+$font-size-h1: 75px;
+$font-size-h2: 55px;
+$font-size-h3: 16px;
+$font-size-h4: 14px;
+$font-size-h5: 12px;
 
 $line-height-base: 24px;
-$font-weight-base: 400;
+$font-weight-base: 300;
 
 /* 2. Colors
    ========================================================================== */
 
 $body-bg:#fff;
-$text-color: #42220b;
-$primary-color: #42240c;
-$secondary-color: #97c684;
-$third-color: #543622;
-$link-color: #42220b;
-$link-color-text: $secondary-color;
-$link-color-hover: #608b44;
+$text-color: #2b2d36;
+$primary-color: #004eff;
+$secondary-color: #ed3425;
+$third-color: #1b2f4f;
+$link-color: #fff;
+$link-color-hover: #004eff;
 $white: #fff;
 $black: #000;
 $title-color: $primary-color;
-$title-color-2: #292929;
-$error: #e4798f;
-$text-color-blog: #513527;
+$error: #ff6000;
 /* 3. Buttons
    ========================================================================== */
 // default
