@@ -4,14 +4,14 @@
 			<h1>Thinkware X350 и еще пара строк чтобы настроить интерлиньяж H1</h1>
 			<h2>Thinkware F770 и еще пара строк чтобы настроить интерлиньяж H2</h2>
 			<h3>Преимущества покупки у официального дилера торговой марки “Thinkware” H3 </h3>
-			<button class="btn" type="button"><i class="icon icon-cart"></i> Заказать</button>
-			<button class="btn" type="button"><i class="icon icon-products"></i> Вся продукция</button>
-			<button class="btn btn-check" type="button"><i class="icon icon-check"></i></button>
-			<a href="#" class="btn btn-dark" type="button">Скрыть карту</a>
+			<button class="btn md-trigger" data-modal="modal-1" type="button"><i class="icon icon-cart"></i> Заказать</button>
+			<button class="btn md-trigger" data-modal="modal-1" type="button"><i class="icon icon-products"></i> Вся продукция</button>
+			<button class="btn btn-check md-trigger" data-modal="modal-1" type="button"><i class="icon icon-check"></i></button>
+			<a href="#" class="btn btn-dark md-trigger" data-modal="modal-1" type="button">Скрыть карту</a>
 			<div style="background:#2b2d36; height: 153px; margin-top:20px; padding-top:50px; padding-left:30px; margin-bottom:20px;">
 				<a href="#" class="btn btn-light" type="button">Адрес на карте</a>
 			</div>
-			<form class="form">
+			<form id="form" class="form">
 				<div class="input-field">
 					<input id="text" type="text" class="validate">
 					<label for="text">Поле ввода текста</label>
@@ -19,6 +19,10 @@
 				<div class="input-field">
 					<input id="email" type="email" class="validate">
 					<label for="email">Email</label>
+				</div>
+				<div class="input-field">
+					<input id="tel" type="tel" class="validate">
+					<label for="tel">Phone</label>
 				</div>
 			</form>
 		</div>
