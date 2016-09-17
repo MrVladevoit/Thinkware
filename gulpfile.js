@@ -91,13 +91,13 @@ lazyRequireTask('js:min', './gulp/tasks/minjs', {
 	dest: paths.js.minDest
 });
 
-//JS:concat
-// lazyRequireTask('concat', './gulp/concat', {
-// 	name: 'name.js',
-// 	src: paths.js.src,
-// 	dest: paths.js.dest,
-// 	destMin: paths.js.dest
-// });
+// JS:concat
+lazyRequireTask('concat', './gulp/tasks/concat', {
+	name: 'materialize.js',
+	src: 'src/js/materialize/**/*.js',
+	dest: 'src/js/plugins/',
+	destMin: 'src/js/plugins/'
+});
 
 
 /*----------------------------------------
@@ -183,6 +183,10 @@ gulp.task('watch', function () {
 	$.watch(paths.js.minSrc, function () {
 		gulp.start('jsMinSync');
 		gulp.start('js:min');
+	});
+	// js concat
+	$.watch('src/js/materialize/*.js', function () {
+		gulp.start('concat')
 	});
 	// images
 	// $.watch(paths.images.all, function () {

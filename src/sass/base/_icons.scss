@@ -1,0 +1,23 @@
+/* ==========================================================================
+   ICONS
+   ===========================================================================*/
+.icon{
+	position: relative;
+	display:inline-block;
+}
+.icon-cart{
+	width: 23px;
+	height: 18px;
+	@include sprite($cart);
+}
+.icon-products{
+	width: 16px;
+	height: 16px;
+	@include sprite($products);
+}
+.icon-check{
+	width: 25px;
+	height: 17px;
+	@include sprite($check);
+}
+/* end icons*/

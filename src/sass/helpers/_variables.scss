@@ -36,6 +36,7 @@ $font-weight-base: 300;
    ========================================================================== */
 
 $body-bg:#fff;
+$header-bg:#1c1d25;
 $text-color: #2b2d36;
 $primary-color: #004eff;
 $secondary-color: #ed3425;
@@ -44,27 +45,34 @@ $link-color: #fff;
 $link-color-hover: #004eff;
 $white: #fff;
 $black: #000;
-$title-color: $primary-color;
+$title-color: $text-color;
 $error: #ff6000;
+$success: #29b40d;
 /* 3. Buttons
    ========================================================================== */
 // default
-$button-height: auto;
+$button-height: 42px;
 $button-width: auto;
-$button-radius: 0;
+$button-font-size:13px;
+$button-font-weight:600;
 $button-background: $primary-color;
-$button-background-hover: #fff;
-$button-color: #fff ;
-$button-color-hover: $primary-color;
-$button-border-width: 3px;
-$button-border-color: $primary-color;
+$button-background-hover: $primary-color;
+$button-color: $white;
+$button-color-hover: $white;
+$button-radius: 21px;
+$button-border-width: 0px;
+$button-border-color: $white;
+
+// check button
+$button-check-background:$success;
+
 
 // lighten button
 $button-lighten-background: transparent;
-$button-lighten-background-hover: #fff;
-$button-lighten-color: #fff ;
-$button-lighten-color-hover: $primary-color;
-$button-lighten-border-width: 3px;
+$button-lighten-background-hover: $primary-color;
+$button-lighten-color: $white;
+$button-lighten-color-hover: $white;
+$button-lighten-border-width: 2px;
 $button-lighten-border-color: #fff;
 
 // // Disabled styles
@@ -75,12 +83,29 @@ $button-disabled-color: #9F9F9F ;
 
 /* 4. Forms
    ========================================================================== */
+$gutter-width: 1.5rem !default;
 
-$input-height:30px;
+$input-height: 3rem;
 $input_font_size:$font-size-base;
-$input-border-color:#ccc;
+$input-border-color:$text-color;
 $input-placeholder-color: $black;
-$input-text-color:$black;
+$input-text-color:$text-color;
+$input-font-size: 18px;
+$input-margin: 0 0 20px 0 ;
+$input-padding: 0 ;
+$input-transition: all .3s ;
+$label-font-size: .8rem ;
+$input-background: #fff ;
+
+$input-error-color: $error;
+$input-success-color: $success ;
+$input-focus-color: $primary-color ;
+$input-disabled-color: rgba(0,0,0, .26) ;
+$input-disabled-solid-color: #BDBDBD ;
+$input-disabled-border: 1px dotted $input-disabled-color ;
+$input-invalid-border: 1px solid $input-error-color ;
+$placeholder-text-color: lighten($input-border-color, 20%) ;
+
 // $input_radius:;
 
 

@@ -1,0 +1,18 @@
+%svg-common {
+	background: url("../sprite-position.svg") no-repeat;
+}
+
+.svg-cart {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 23px;
+	height: 18px;
+}
+
+.svg-check {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 27px;
+	height: 19px;
+}
+
