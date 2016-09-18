@@ -3189,7 +3189,7 @@ The `sprites` mixin generates identical output to the CSS template
 .advantages {
 	padding-top: 16px;
 	padding-left: 28px;
-	padding-bottom: 100px;
+	padding-bottom: 40px;
 	width: 100%;
 	background: url(../images/inside.jpg) no-repeat top center;
 	background-size: cover;
@@ -3270,6 +3270,83 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* end advantages */
+
+/* ==========================================================================
+	 CONTACTS
+	 ========================================================================== */
+
+.contacts {
+	background: #000 url("../images/adress.jpg") center top no-repeat;
+	background-size: cover;
+	min-height: 596px;
+	color: #fff;
+}
+
+.contacts_adress {
+	width: 231px;
+	margin: 0 0 57px;
+}
+
+.contacts_adress,
+.contacts_adress a {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 28px;
+}
+
+.contacts_adress:hover,
+.contacts_adress a:hover {
+	color: #fff;
+}
+
+.contacts_section_title {
+	font-size: 75px;
+	font-weight: 300;
+	line-height: 69px;
+	margin: 0;
+}
+
+.contacts_title {
+	font-size: 35px;
+	font-weight: 300;
+	line-height: 69px;
+	padding-top: 11px;
+}
+
+.contacts__welcome {
+	padding-left: 33px;
+}
+
+.contacts_text p {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 28px;
+	color: #fff;
+	margin: 0 0 30px;
+}
+
+.contacts_company {
+	opacity: .5;
+	color: white;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 28px;
+}
+
+.contacts_inner-1 {
+	margin-top: 45px;
+}
+
+.contacts_inner-2 {
+	margin-top: 85px;
+}
+
+.contacts_inner-3 {
+	margin-top: 118px;
+}
+
+/* end contacts*/
 
 @media (min-width: 768px) {
 
