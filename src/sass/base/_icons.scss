@@ -30,4 +30,64 @@
 	height: 36px;
 	@include sprite($smartphone);
 }
+.icon-box{
+	width: 50px;
+	height: 44px;
+	@include sprite($box);
+}
+.icon-box-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($box-black);
+}
+.icon-office{
+	width: 50px;
+	height: 44px;
+	@include sprite($office);
+}
+.icon-office-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($office-black);
+}
+.icon-manager{
+	width: 50px;
+	height: 44px;
+	@include sprite($manager);
+}
+.icon-manager-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($manager-black);
+}
+.icon-lawyer{
+	width: 50px;
+	height: 44px;
+	@include sprite($lawyer);
+}
+.icon-lawyer-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($lawyer-black);
+}
+.icon-system{
+	width: 50px;
+	height: 44px;
+	@include sprite($system);
+}
+.icon-system-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($system-black);
+}
+.icon-pay{
+	width: 50px;
+	height: 44px;
+	@include sprite($pay);
+}
+.icon-pay-black{
+	width: 50px;
+	height: 44px;
+	@include sprite($pay-black);
+}
 /* end icons*/

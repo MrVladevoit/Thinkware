@@ -1179,6 +1179,11 @@ h5 {
 	padding-left: 15px;
 }
 
+.section_title_white {
+	color: #fff;
+	padding-left: 0;
+}
+
 nav ul,
 ul {
 	padding: 0;
@@ -1833,7 +1838,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 23px;
 	height: 18px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -78px -63px;
+	background-position: -164px -177px;
 	width: 23px;
 	height: 18px;
 }
@@ -1842,7 +1847,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 16px;
 	height: 16px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -63px -116px;
+	background-position: -202px -177px;
 	width: 16px;
 	height: 16px;
 }
@@ -1851,7 +1856,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 25px;
 	height: 17px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -135px -59px;
+	background-position: -122px -177px;
 	width: 27px;
 	height: 19px;
 }
@@ -1860,7 +1865,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 25px;
 	height: 37px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -200px -60px;
+	background-position: -202px -118px;
 	width: 25px;
 	height: 37px;
 }
@@ -1869,9 +1874,117 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 22px;
 	height: 36px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -200px -112px;
+	background-position: -156px -124px;
 	width: 22px;
 	height: 36px;
+}
+
+.icon-box {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -68px -63px;
+	width: 50px;
+	height: 44px;
+}
+
+.icon-box-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px -61px;
+	width: 50px;
+	height: 44px;
+}
+
+.icon-office {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -202px -59px;
+	width: 48px;
+	height: 44px;
+}
+
+.icon-office-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -202px 0;
+	width: 48px;
+	height: 44px;
+}
+
+.icon-manager {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -61px -177px;
+	width: 46px;
+	height: 45px;
+}
+
+.icon-manager-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -177px;
+	width: 46px;
+	height: 45px;
+}
+
+.icon-lawyer {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -67px 0;
+	width: 52px;
+	height: 48px;
+}
+
+.icon-lawyer-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 0;
+	width: 52px;
+	height: 48px;
+}
+
+.icon-system {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -63px;
+	width: 53px;
+	height: 46px;
+}
+
+.icon-system-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px 0;
+	width: 53px;
+	height: 46px;
+}
+
+.icon-pay {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -124px;
+	width: 63px;
+	height: 38px;
+}
+
+.icon-pay-black {
+	width: 50px;
+	height: 44px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -78px -124px;
+	width: 63px;
+	height: 38px;
 }
 
 /* end icons*/
@@ -3008,11 +3121,6 @@ The `sprites` mixin generates identical output to the CSS template
 	min-height: 720px;
 }
 
-.video_section .section_title {
-	color: #fff;
-	padding-left: 0;
-}
-
 .video__item {
 	display: block;
 	float: left;
@@ -3034,7 +3142,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .about {
 	padding-top: 124px;
-	padding-bottom: 160px;
+	padding-bottom: 115px;
 }
 
 .about_image {
@@ -3073,6 +3181,95 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* end about */
+
+/* ==========================================================================
+	 ADVANTAGES
+	 ========================================================================== */
+
+.advantages {
+	padding-top: 16px;
+	padding-left: 28px;
+	padding-bottom: 100px;
+	width: 100%;
+	background: url(../images/inside.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.advantages .section_title {
+	margin-bottom: 42px;
+}
+
+.advantages__list__item {
+	height: 265px;
+	padding: 33px 36px;
+	color: #fff;
+	text-align: left;
+	background-color: transparent;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.advantages__list__item:hover {
+	color: #666;
+	background-color: #fff;
+	transition: all .5s cubic-bezier(.32, .41, .18, 1.36);
+}
+
+.advantages__list__item:hover .advantages__list__item_title {
+	color: #2b2d36;
+}
+
+.advantages__list__item:hover .icon-box {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px -61px;
+	width: 50px;
+	height: 44px;
+}
+
+.advantages__list__item:hover .icon-office {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -202px 0;
+	width: 48px;
+	height: 44px;
+}
+
+.advantages__list__item:hover .icon-manager {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -177px;
+	width: 46px;
+	height: 45px;
+}
+
+.advantages__list__item:hover .icon-lawyer {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 0;
+	width: 52px;
+	height: 48px;
+}
+
+.advantages__list__item:hover .icon-system {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px 0;
+	width: 53px;
+	height: 46px;
+}
+
+.advantages__list__item:hover .icon-pay {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -78px -124px;
+	width: 63px;
+	height: 38px;
+}
+
+.advantages__list__item i {
+	margin-bottom: 4px;
+}
+
+.advantages__list__item_title {
+	font-weight: 600;
+}
+
+/* end advantages */
 
 @media (min-width: 768px) {
 
