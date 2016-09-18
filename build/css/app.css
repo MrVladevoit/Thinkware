@@ -3028,6 +3028,52 @@ The `sprites` mixin generates identical output to the CSS template
 
 /*end video*/
 
+/* ==========================================================================
+	 ABOUT
+	 ========================================================================== */
+
+.about {
+	padding-top: 124px;
+	padding-bottom: 160px;
+}
+
+.about_image {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+
+.about_title {
+	font-weight: 700;
+	margin: 0 0 29px;
+	line-height: 47px;
+	color: #1b2f4f;
+	text-transform: uppercase;
+}
+
+.about_text {
+	display: inline-block;
+	vertical-align: top;
+	width: 70%;
+	padding-left: 33px;
+}
+
+.about_text p {
+	margin-top: 0;
+}
+
+.about_text p:not(:last-child) {
+	margin-bottom: 22px;
+}
+
+.about_text span {
+	font-weight: 600;
+}
+
+/* end about */
+
 @media (min-width: 768px) {
 
 .container {
