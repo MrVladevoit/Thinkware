@@ -20,4 +20,14 @@
 	height: 17px;
 	@include sprite($check);
 }
+.icon-local{
+	width: 25px;
+	height: 37px;
+	@include sprite($local);
+}
+.icon-smartphone{
+	width: 22px;
+	height: 36px;
+	@include sprite($smartphone);
+}
 /* end icons*/

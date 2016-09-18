@@ -1,0 +1,144 @@
+/* ==========================================================================
+	 Slider
+	 ========================================================================== */
+.main_slider{
+	position: relative;
+	.container{
+		width: 772px;
+	}
+}
+.slider__catalog{
+	width: 100%;
+	height: 622px;
+	background: transparent;
+	overflow: hidden;
+}
+.slick-list{
+	height: 100%;
+}
+.slick-track{
+	height:100%;
+}
+.item_F750{
+	background: url(../images/slider1.png) no-repeat top center;
+	background-size: cover;
+}
+.item_wh-138{
+	background: url(../images/slider2.png) no-repeat top center;
+	background-size: cover;
+}
+.item_f50{
+	background: url(../images/slider3.png) no-repeat top center;
+	background-size: cover;
+}
+.slider__catalog__item{
+	padding: 138px 0 0 0;
+}
+.slider__catalog__item_title{
+	margin-top: 31px;
+	margin-bottom: 0;
+	width: 600px;
+	color: white;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 69px;
+	text-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+.thumbnails{
+	position: absolute;
+	z-index: 3;
+	bottom: 43px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background:transparent;
+	&.container{
+		width: 800px;
+	}
+	.slick-list{
+		padding: 0 !important;
+	}
+}
+.slider__thumbnails{
+	width: 100%;
+}
+.slider__thumbnails_item{
+	cursor:pointer;
+	&:focus{
+		outline:none;
+		border:0;
+	}
+	&:nth-child(2){
+		.inner,
+		.slider__thumbnails_item_label{
+			margin-left: 32px;
+		}
+	}
+	&:last-child{
+		.inner,
+		.slider__thumbnails_item_label{
+			margin-left: 63px;
+		}
+	}
+	&:hover{
+		.inner__box{
+			height:100%;
+			bottom: 0;
+			transition: all .25s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0ms;
+		}
+	}
+	.inner{
+		position: relative;
+		width: 170px;
+		height:90px;
+		overflow:hidden;
+	}
+}
+.inner__box{
+	overflow: hidden;
+	position: absolute;
+	height: 0;
+	width: 100%;
+	bottom: -100%;
+	background-color: $primary-color;
+	transition: all .18s cubic-bezier(0.600, -0.280, 0.735, 0.045) 0ms;
+	img{
+		max-width: 100%;
+		height:auto;
+	}
+}
+.inner__box_cover{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	top:0;
+	z-index: 1;
+	min-height: 1px;
+}
+.inner__line{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	z-index: 4;
+	background:#fff;
+	&:active{
+		.inner__line_progress{
+			width: 100%;
+			transition: all 4s;
+		}
+	}
+}
+.inner__line_progress{
+	width: 0%;
+	height:1px;
+	background: $primary-color;
+}
+.slider__thumbnails_item_label{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 35px;
+}
+/*end slider*/

@@ -1176,6 +1176,7 @@ nav ul,
 ul {
 	padding: 0;
 	margin-bottom: 0;
+	margin-top: 0;
 }
 
 nav ul li,
@@ -1314,6 +1315,24 @@ fieldset[disabled] .btn {
 .animate {
 	-webkit-animation: ripple .65s linear;
 	animation: ripple .65s linear;
+}
+
+.wrapper {
+	padding-top: 99px;
+}
+
+.stock {
+	position: relative;
+	display: inline-block;
+	width: 127px;
+	height: 47px;
+	background-color: #ed3425;
+	border-radius: 4px;
+	color: white;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 47px;
+	text-align: center;
 }
 
 /* Forms
@@ -1830,6 +1849,24 @@ The `sprites` mixin generates identical output to the CSS template
 	height: 19px;
 }
 
+.icon-local {
+	width: 25px;
+	height: 37px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -200px -60px;
+	width: 25px;
+	height: 37px;
+}
+
+.icon-smartphone {
+	width: 22px;
+	height: 36px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -200px -112px;
+	width: 22px;
+	height: 36px;
+}
+
 /* end icons*/
 
 /* ==========================================================================
@@ -1837,12 +1874,105 @@ The `sprites` mixin generates identical output to the CSS template
 	 ========================================================================== */
 
 .header {
-	position: relative;
+	position: fixed;
+	z-index: 777;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	display: block;
 	width: 100%;
-	min-height: 120px;
-	padding-top: 17px;
+	min-height: 99px;
+	padding-top: 30px;
 	background: #1c1d25;
+}
+
+.header .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.header .col-md-6 {
+	padding-right: 0;
+}
+
+.header .icon-smartphone {
+	margin-top: 3px;
+}
+
+.header_logo {
+	display: inline-block;
+	margin-top: 2px;
+}
+
+.header__menu {
+	display: inline-block;
+	padding-top: 5px;
+	padding-left: 1px;
+	margin-right: 34px;
+}
+
+.header__menu_item {
+	display: inline-block;
+}
+
+.header__menu_item:not(:last-child) {
+	margin-right: 16px;
+}
+
+.header__menu_item a {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.header__contacts {
+	display: inline-block;
+	padding-left: 29px;
+}
+
+.header__contacts__local {
+	display: block;
+	float: left;
+	width: 170px;
+}
+
+.header__contacts__tel {
+	display: block;
+	float: left;
+	width: 170px;
+}
+
+.header__contacts__icon {
+	display: block;
+	float: left;
+	width: 30px;
+}
+
+.header__contacts__text {
+	display: block;
+	float: left;
+	width: 133px;
+	padding-left: 3px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 14px;
+}
+
+.header__contacts__text >a {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.header__contacts__text >a:hover,
+.header__contacts__text >a:focus {
+	color: #fff;
 }
 
 /* end header */
@@ -1856,14 +1986,6 @@ The `sprites` mixin generates identical output to the CSS template
 /* ==========================================================================
    MODALS
    ===========================================================================*/
-
-/* General styles for the modal */
-
-/*
-Styles for the html/body for special modal where we want 3d effects
-Note that we need a container wrapping all content on the page for the
-perspective effects (not including the modals and the overlay).
-*/
 
 .md-modal {
 	position: fixed;
@@ -2452,6 +2574,285 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* end modals */
+
+/* ==========================================================================
+	 Slider
+	 ========================================================================== */
+
+.main_slider {
+	position: relative;
+}
+
+.main_slider .container {
+	width: 772px;
+}
+
+.slider__catalog {
+	width: 100%;
+	height: 622px;
+	background: transparent;
+	overflow: hidden;
+}
+
+.slick-list {
+	height: 100%;
+}
+
+.slick-track {
+	height: 100%;
+}
+
+.item_F750 {
+	background: url(../images/slider1.png) no-repeat top center;
+	background-size: cover;
+}
+
+.item_wh-138 {
+	background: url(../images/slider2.png) no-repeat top center;
+	background-size: cover;
+}
+
+.item_f50 {
+	background: url(../images/slider3.png) no-repeat top center;
+	background-size: cover;
+}
+
+.slider__catalog__item {
+	padding: 138px 0 0 0;
+}
+
+.slider__catalog__item_title {
+	margin-top: 31px;
+	margin-bottom: 0;
+	width: 600px;
+	color: white;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 69px;
+	text-shadow: 0 0 30px rgba(0, 0, 0, .25);
+}
+
+.thumbnails {
+	position: absolute;
+	z-index: 3;
+	bottom: 43px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: transparent;
+}
+
+.thumbnails.container {
+	width: 800px;
+}
+
+.thumbnails .slick-list {
+	padding: 0 !important;
+}
+
+.slider__thumbnails {
+	width: 100%;
+}
+
+.slider__thumbnails_item {
+	cursor: pointer;
+}
+
+.slider__thumbnails_item:focus {
+	outline: none;
+	border: 0;
+}
+
+.slider__thumbnails_item:nth-child(2) .inner,
+.slider__thumbnails_item:nth-child(2) .slider__thumbnails_item_label {
+	margin-left: 32px;
+}
+
+.slider__thumbnails_item:last-child .inner,
+.slider__thumbnails_item:last-child .slider__thumbnails_item_label {
+	margin-left: 63px;
+}
+
+.slider__thumbnails_item:hover .inner__box {
+	height: 100%;
+	bottom: 0;
+	transition: all .25s cubic-bezier(.175, .885, .32, 1.275) 0ms;
+}
+
+.slider__thumbnails_item .inner {
+	position: relative;
+	width: 170px;
+	height: 90px;
+	overflow: hidden;
+}
+
+.inner__box {
+	overflow: hidden;
+	position: absolute;
+	height: 0;
+	width: 100%;
+	bottom: -100%;
+	background-color: #004eff;
+	transition: all .18s cubic-bezier(.6, -.28, .735, .045) 0ms;
+}
+
+.inner__box img {
+	max-width: 100%;
+	height: auto;
+}
+
+.inner__box_cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+	min-height: 1px;
+}
+
+.inner__line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	z-index: 4;
+	background: #fff;
+}
+
+.inner__line:active .inner__line_progress {
+	width: 100%;
+	transition: all 4s;
+}
+
+.inner__line_progress {
+	width: 0;
+	height: 1px;
+	background: #004eff;
+}
+
+.slider__thumbnails_item_label {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 35px;
+}
+
+/*end slider*/
+
+/* ==========================================================================
+	 PRODUCTS
+	 ========================================================================== */
+
+.product {
+	width: 100%;
+	padding: 60px 0 50px;
+	min-height: 100px;
+}
+
+.product__view {
+	padding-bottom: 56px;
+}
+
+.product__view_title {
+	font-size: 75px;
+	font-weight: 300;
+	line-height: 69px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	padding-left: 5px;
+}
+
+.product__view_desc {
+	padding-left: 5px;
+	padding-right: 90px;
+	padding-bottom: 26px;
+	vertical-align: middle;
+}
+
+.product__view__order {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	padding-left: 5px;
+}
+
+.product__view__order_price {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 69px;
+	margin-right: 25px;
+}
+
+.rub {
+	position: relative;
+}
+
+.rub:after {
+	position: absolute;
+	content: "-";
+	bottom: -11px;
+	right: 10px;
+}
+
+/* ==========================================================================
+	 PROPERTIES
+	 ========================================================================== */
+
+.product__properties {
+	display: block;
+	width: 100%;
+}
+
+.product__properties_item {
+	position: relative;
+	display: inline-block;
+	width: 99px;
+	cursor: pointer;
+}
+
+.product__properties_item img {
+	position: relative;
+	max-width: 100%;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	transition: all .5s ease;
+}
+
+.product__properties_item:not(:last-child) {
+	margin-right: 16px;
+}
+
+.product__properties_item:hover img {
+	-webkit-transform: translateY(-15px);
+	-ms-transform: translateY(-15px);
+	transform: translateY(-15px);
+	transition: all .5s ease;
+}
+
+.product__properties_item:hover .prop {
+	visibility: visible;
+	opacity: 1;
+	transition: all .5s ease;
+}
+
+.prop {
+	position: absolute;
+	top: -125%;
+	left: 0;
+	display: inline-block;
+	font-weight: 600;
+	line-height: 24px;
+	width: 197px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+/*end products*/
 
 @media (min-width: 768px) {
 

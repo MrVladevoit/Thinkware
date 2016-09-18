@@ -95,6 +95,7 @@ nav ul,
 ul {
 	padding: 0;
 	margin-bottom: 0;
+	margin-top: 0;
 	li {
 		list-style: none;
 	}
@@ -315,8 +316,22 @@ fieldset[disabled] .btn {
 
 
 .wrapper{
+	padding-top: 99px;
 }
 
+.stock{
+	position: relative;
+	display:inline-block;
+	width: 127px;
+	height: 47px;
+	background-color: #ed3425;
+	border-radius: 4px;
+	color: white;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 47px;
+	text-align: center;
+}
 
 /* Forms
    ========================================================================== */
