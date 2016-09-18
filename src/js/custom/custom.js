@@ -52,12 +52,18 @@ $('.slider__thumbnails').slick({
 	speed: 300,
 	focusOnSelect: true
 });
-// $('.slider__thumbnails_item').find('.inner__line').removeClass('active');
+/*----------------------------------------
+Parallax
+----------------------------------------*/
+$().ready(function(){
+	$(window).scroll(function () {
 
-// $('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active');
+		var scroll = $(this).scrollTop();
+		var res = scroll / 3;
 
-$('.inner__line').children()
-
+		$('#slider').css({'transform' : 'translateY(' + res +'px)'})
+	});
+});
 
 /*----------------------------------------
 MOBILE

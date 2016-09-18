@@ -3,6 +3,7 @@
 	 ========================================================================== */
 .main_slider{
 	position: relative;
+	z-index: 4;
 	.container{
 		width: 772px;
 	}
@@ -123,10 +124,9 @@
 	height: 1px;
 	z-index: 4;
 	background:#fff;
-	&:active{
+	&.active{
 		.inner__line_progress{
-			width: 100%;
-			transition: all 4s;
+			display: block !important;
 		}
 	}
 }

@@ -7152,6 +7152,8 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
                 .removeClass('slick-slide slick-active slick-center slick-visible slick-current')
                 .removeAttr('aria-hidden')
                 .removeAttr('data-slick-index')
+                $('.slider__thumbnails_item').find('.inner__line').removeClass('active')
+                $('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"})
                 .each(function(){
                     $(this).attr('style', $(this).data('originalStyling'));
                 });
@@ -8453,11 +8455,21 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
         allSlides = _.$slider
             .find('.slick-slide')
             .removeClass('slick-active slick-center slick-current')
-            .attr('aria-hidden', 'true');
+            .attr('aria-hidden', 'true')
+
+            $('.slider__thumbnails_item').find('.inner__line').removeClass('active')
+
+            $('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
 
         _.$slides
             .eq(index)
-            .addClass('slick-current');
+            .addClass('slick-current')
+            $('.slider__thumbnails_item').find('.inner__line').removeClass('active')
+            $('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
+
+            $('.slider__thumbnails_item').find('.inner__line_progress').stop().css({"width" : "0%"})
+
+            $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').stop().animate({width: "100%"}, 4000);
 
         if (_.options.centerMode === true) {
 
@@ -8471,10 +8483,6 @@ Materialize.toast = function (message, displayLength, className, completeCallbac
                         .slice(index - centerOffset, index + centerOffset + 1)
                         .addClass('slick-active')
                         .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active');
 
 
 
@@ -8485,10 +8493,6 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('activ
                         .slice(indexOffset - centerOffset + 1, indexOffset + centerOffset + 2)
                         .addClass('slick-active')
                         .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active');
 
                 }
 
@@ -8520,26 +8524,12 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('activ
                     .slice(index, index + _.options.slidesToShow)
                     .addClass('slick-active')
                     .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animate({width: "100%"}, 4000);
 
             } else if (allSlides.length <= _.options.slidesToShow) {
 
                 allSlides
                     .addClass('slick-active')
                     .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animate({width: "100%"}, 4000);
 
             } else {
 
@@ -8552,13 +8542,6 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animat
                         .slice(indexOffset - (_.options.slidesToShow - remainder), indexOffset + remainder)
                         .addClass('slick-active')
                         .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animate({width: "100%"}, 4000);
 
                 } else {
 
@@ -8566,13 +8549,6 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animat
                         .slice(indexOffset, indexOffset + _.options.slidesToShow)
                         .addClass('slick-active')
                         .attr('aria-hidden', 'false');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animate({width: "100%"}, 4000);
                 }
 
             }
@@ -9093,7 +9069,11 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animat
         _.$slides
             .removeClass('slick-slide slick-active slick-visible slick-current')
             .attr('aria-hidden', 'true')
-            .css('width', '');
+            .css('width', '')
+            // gp
+            $('.slider__thumbnails_item').find('.inner__line').removeClass('active')
+
+            $('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
 
     };
 
@@ -9150,13 +9130,6 @@ $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animat
                 .find('li')
                 .removeClass('slick-active')
                 .attr('aria-hidden', 'true');
-// gp
-$('.slider__thumbnails_item').find('.inner__line').removeClass('active');
-
-$('.slider__thumbnails_item').find('.inner__line_progress').css({"width": "0%"});
-$('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active')
-
-$('.slider__thumbnails_item.slick-current').find('.inner__line_progress').animate({width: "100%"}, 4000);
 
             _.$dots
                 .find('li')
@@ -9884,12 +9857,18 @@ $('.slider__thumbnails').slick({
 	speed: 300,
 	focusOnSelect: true
 });
-// $('.slider__thumbnails_item').find('.inner__line').removeClass('active');
+/*----------------------------------------
+Parallax
+----------------------------------------*/
+$().ready(function(){
+	$(window).scroll(function () {
 
-// $('.slider__thumbnails_item.slick-current').find('.inner__line').addClass('active');
+		var scroll = $(this).scrollTop();
+		var res = scroll / 3;
 
-$('.inner__line').children()
-
+		$('#slider').css({'transform' : 'translateY(' + res +'px)'})
+	});
+});
 
 /*----------------------------------------
 MOBILE
