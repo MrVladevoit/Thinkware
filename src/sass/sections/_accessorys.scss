@@ -1,0 +1,41 @@
+/* ==========================================================================
+	 ACCESSORYS
+	 ========================================================================== */
+
+.accessorys{
+	padding-top: 34px;
+	padding-bottom: 105px;
+}
+.accessorys__item{
+	display: block;
+	float: left;
+	width: 20%;
+	margin-top: 20px;
+}
+.item_body{
+	min-height: 315px;
+	padding-left: 7px;
+}
+.accessorys__item_image{
+	width: 150px;
+	height: 140px;
+	overflow: hidden;
+}
+.accessorys__item_title{
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 28px;
+}
+.accessorys__item_price{
+	font-size: 25px;
+	line-height: 45px;
+	.rub{
+		&:after{
+			right: 5px;
+		}
+	}
+}
+.accessorys__item_order{
+	padding-left: 7px;
+}
+/*end accessorys*/

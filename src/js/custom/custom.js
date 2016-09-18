@@ -40,6 +40,7 @@ MAIN SLIDER
 	autoplay: true,
 	autoplaySpeed: 4000,
 	speed: 300,
+	pauseOnHover:false,
 	asNavFor: '.slider__thumbnails'
 });
 $('.slider__thumbnails').slick({
