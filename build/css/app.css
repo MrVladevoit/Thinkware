@@ -2604,17 +2604,17 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .item_F750 {
-	background: url(../images/slider1.jpg) no-repeat top center;
+	background: url(../images/slider1.jpg) no-repeat bottom center;
 	background-size: cover;
 }
 
 .item_wh-138 {
-	background: url(../images/slider2.jpg) no-repeat top center;
+	background: url(../images/slider2.jpg) no-repeat bottom center;
 	background-size: cover;
 }
 
 .item_f50 {
-	background: url(../images/slider3.jpg) no-repeat top center;
+	background: url(../images/slider3.jpg) no-repeat bottom center;
 	background-size: cover;
 }
 
@@ -2934,6 +2934,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .product__preview__item_order_price {
 	font-size: 44px;
+	margin-right: 45px;
 }
 
 /*end products*/
@@ -3650,6 +3651,25 @@ a:hover {
 	background: #004eff;
 	color: #fff;
 	border-color: transparent;
+}
+
+}
+
+@media screen and (min-width: 1600px) {
+
+.item_F750 {
+	background: url(../images/slider1-lg.jpg) no-repeat bottom center;
+	background-size: cover;
+}
+
+.item_wh-138 {
+	background: url(../images/slider2-lg.jpg) no-repeat bottom center;
+	background-size: cover;
+}
+
+.item_f50 {
+	background: url(../images/slider3-lg.jpg) no-repeat bottom center;
+	background-size: cover;
 }
 
 }
