@@ -1927,6 +1927,10 @@ The `sprites` mixin generates identical output to the CSS template
 	margin-right: 16px;
 }
 
+.header__menu_item.active a {
+	color: #004eff;
+}
+
 .header__menu_item a {
 	font-size: 13px;
 	text-transform: uppercase;

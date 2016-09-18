@@ -29,7 +29,7 @@
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="css/app.min.css">
 </head>
-<body>
+<body  data-spy="scroll" data-target="#menu" data-offset="10">
 	<!-- header -->
 	<header id="header" class="header clearfix">
 		<div class="container">
@@ -40,12 +40,12 @@
 					</a>
 				</div>
 				<div class="col-md-6">
-					<nav class="header__menu">
-						<ul>
-							<li class="header__menu_item"><a href="#products" title="">Регистраторы</a></li>
-							<li class="header__menu_item"><a href="#accessorys" title="">Аксессуары</a></li>
-							<li class="header__menu_item"><a href="#about" title="">О компании</a></li>
-							<li class="header__menu_item"><a href="#about" title="">Условия</a></li>
+					<nav id="menu" class="header__menu">
+						<ul class="nav"  role="tablist">
+							<li class="header__menu_item"><a href="#product-x350" class="scroll" title="">Регистраторы</a></li>
+							<li class="header__menu_item"><a href="#accessorys" class="scroll" title="">Аксессуары</a></li>
+							<li class="header__menu_item"><a href="#about" class="scroll" title="">О компании</a></li>
+							<li class="header__menu_item"><a href="#video" class="scroll" title="">Условия</a></li>
 						</ul>
 					</nav>
 					<a href="http://taushop.spb.ru/shop.php?cid=2941" class="btn" type="button" target="_blank"><i class="icon icon-products"></i> Вся продукция</a>
@@ -422,7 +422,12 @@
 		</div>
 	</div>
 </section>
-
+<!-- about -->
+<section id="about" class="about">
+	<div class="container">
+		<div class="row"></div>
+	</div>
+</section>
 
 
 	</div>

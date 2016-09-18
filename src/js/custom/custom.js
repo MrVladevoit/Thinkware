@@ -26,37 +26,36 @@ $(document).ready(function() {
 		ink.css({top: y+'px', left: x+'px'}).addClass("animate");
 		});
 	});
-	/* Parallax */
-	$('.parallax').parallax();
 
-});
-/*----------------------------------------
-MAIN SLIDER
-----------------------------------------*/
- $('.slider__catalog').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	autoplay: true,
-	autoplaySpeed: 4000,
-	speed: 300,
-	pauseOnHover:false,
-	asNavFor: '.slider__thumbnails'
-});
-$('.slider__thumbnails').slick({
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	asNavFor: '.slider__catalog',
-	dots: true,
-	arrows: false,
-	centerMode: true,
-	speed: 300,
-	focusOnSelect: true
-});
-/*----------------------------------------
-Parallax
-----------------------------------------*/
-$().ready(function(){
+	$('body').scrollspy({ target: '#menu' })
+	/*----------------------------------------
+	MAIN SLIDER
+	----------------------------------------*/
+	 $('.slider__catalog').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		speed: 300,
+		pauseOnHover:false,
+		asNavFor: '.slider__thumbnails'
+	});
+
+	$('.slider__thumbnails').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider__catalog',
+		dots: true,
+		arrows: false,
+		centerMode: true,
+		speed: 300,
+		focusOnSelect: true
+	});
+
+	/*----------------------------------------
+	Parallax
+	----------------------------------------*/
 	$(window).scroll(function () {
 
 		var scroll = $(this).scrollTop();
@@ -64,6 +63,23 @@ $().ready(function(){
 
 		$('#slider').css({'transform' : 'translateY(' + res +'px)'})
 	});
+
+
+/*----------------------------------------
+	SCROLL / плавный скролл
+----------------------------------------*/
+
+	 $('a.scroll').on("click", function(e){
+
+			var anchor = $(this);
+
+			$('html, body').stop().animate({
+				 scrollTop: $(anchor.attr('href')).offset().top
+			}, 2000);
+			// e.preventDefault();
+	 });
+
+
 });
 
 /*----------------------------------------

@@ -39,6 +39,11 @@
 	&:not(:last-child){
 		margin-right: 16px;
 	}
+	&.active{
+		a{
+			color: $primary-color;
+		}
+	}
 	a{
 		font-size: 13px;
 		text-transform: uppercase;
