@@ -2823,7 +2823,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .product__properties_item:not(:last-child) {
-	margin-right: 16px;
+	margin-right: 13px;
 }
 
 .product__properties_item:hover img {
@@ -2850,6 +2850,23 @@ The `sprites` mixin generates identical output to the CSS template
 	visibility: hidden;
 	opacity: 0;
 	transition: all .5s ease;
+}
+
+.product__characteristics {
+	padding-top: 39px;
+}
+
+.product__characteristics_item {
+	display: block;
+	float: left;
+	width: 25%;
+	padding-right: 20px;
+	margin-bottom: 16px;
+	min-height: 80px;
+}
+
+.character_title {
+	font-weight: 600;
 }
 
 /*end products*/

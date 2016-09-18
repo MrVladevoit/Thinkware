@@ -65,7 +65,7 @@
 		transition: all .5s ease;
 	}
 	&:not(:last-child){
-		margin-right: 16px;
+		margin-right: 13px;
 	}
 	&:hover{
 		img{
@@ -90,5 +90,19 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: all .5s ease;
+}
+.product__characteristics{
+	padding-top: 39px;
+}
+.product__characteristics_item{
+	display:block;
+	float: left;
+	width: 25%;
+	padding-right: 20px;
+	margin-bottom: 16px;
+	min-height: 80px;
+}
+.character_title{
+	font-weight: 600;
 }
 /*end products*/
