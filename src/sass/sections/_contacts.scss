@@ -61,4 +61,23 @@
 .contacts_inner-3{
 	margin-top: 118px;
 }
+
+.map-close{
+	position: absolute;
+	z-index: 45;
+	left: 115px;
+	bottom: 40px;
+	display:none;
+	&.active{
+		display:block;
+	}
+}
+
+
+// #map {
+// 	display:block;
+// 	height: 800px;
+// 	width: 100%;
+// }
+
 /* end contacts*/

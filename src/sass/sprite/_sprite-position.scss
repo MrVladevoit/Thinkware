@@ -2,17 +2,17 @@
 	background: url("../sprite-position.svg") no-repeat;
 }
 
-.svg-cart {
+.svg-YouTube-icon-dark {
 	@extend %svg-common;
 	background-position: 0 0;
-	width: 23px;
-	height: 18px;
+	width: 1024px;
+	height: 721px;
 }
 
-.svg-check {
+.svg-YouTube-icon-red {
 	@extend %svg-common;
 	background-position: 0 100%;
-	width: 27px;
-	height: 19px;
+	width: 1024px;
+	height: 721px;
 }
 

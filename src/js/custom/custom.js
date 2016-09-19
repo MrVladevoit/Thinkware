@@ -79,42 +79,47 @@ $(document).ready(function() {
 			// e.preventDefault();
 	 });
 
+	$('.btn-open').click(function() {
+		$('.map').css('display', 'block');
+	});
+
+
+	$('.map').hide();
+
+	$('.map-open').click(function(){
+			$(this).toggleClass('opened');
+			$('.map-close').toggleClass('active');
+			$('.map').slideToggle();
+	});
+	$('.map-close').click(function(){
+		$(this).toggleClass('active');
+		$('.map-open').toggleClass('opened');
+		$('.map').slideToggle();
+	});
 
 });
 
-/*----------------------------------------
-MOBILE
-----------------------------------------*/
-// media query event handler
+jQuery(document).ready(function() {
+	"use strict";
+	$(function() {
+	    $(".youtube").each(function() {
+	        // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+	        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
-// $('#header-swipe').swipe( {
-// 	//Single swipe handler for left swipes
-// 	swipeLeft: function () {
-// 			$.sidr('open', 'sidr');
-// 			$('#simple-menu').addClass('is-active');
-// 	}
-// });
-// if (matchMedia) {
-// 	var mq = window.matchMedia("(min-width: 767px)");
-// 	mq.addListener(WidthChange);
-// 	WidthChange(mq);
-// }
-// // media query change
-// function WidthChange(mq) {
-// 	if (mq.matches) {
-// 	// window width is at least 767px
-// 	} else {
-// 		$('body').swipe({
-// 			swipeRight: function () {
-// 					$.sidr('close', 'sidr');
-// 					$('#simple-menu').removeClass('is-active');
-// 			}
-// 		});
-// 	}
-// };
+	        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+	        $(this).append($('<div/>', {'class': 'play'}));
 
-// /*Select */
-//   $( function() {
-//     $( ".select-box" ).selectmenu();
+	        $(document).delegate('#'+this.id, 'click', function() {
+	            // создаем iframe со включенной опцией autoplay
+	            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+	            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
 
-//   } );
+	            // Высота и ширина iframe должны быть такими же, как и у родительского блока
+	            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+
+	            // Заменяем миниатюру HTML5 плеером с YouTube
+	            $(this).replaceWith(iframe);
+	        });
+	    });
+	 });
+});
