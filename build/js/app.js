@@ -5234,22 +5234,6 @@ $(document).ready(function() {
 		$('.map').css('display', 'block');
 	});
 
-/*----------------------------------------
-	HIDE MAP
-----------------------------------------*/
-
-	$('.map').hide();
-
-	$('.map-open').click(function(){
-			$(this).toggleClass('opened');
-			$('.map-close').toggleClass('active');
-			$('.map').slideToggle();
-	});
-	$('.map-close').click(function(){
-		$(this).toggleClass('active');
-		$('.map-open').toggleClass('opened');
-		$('.map').slideToggle();
-	});
 
 /*----------------------------------------
 	MODAL
@@ -5301,6 +5285,7 @@ $(document).ready(function() {
 		$(this).prev('.product_hide').slideToggle( 800 );
 	});
 });
+
 
 /*----------------------------------------
 	YOUTUBE VIDEOS
