@@ -152,6 +152,9 @@
 .product__preview__item_order{
 	float:right;
 	padding: 60px 0px 0px 18px;
+	.btn{
+		z-index: 88;
+	}
 }
 .product__preview__item_name{
 	display:inline-block;

@@ -3050,6 +3050,10 @@ The `sprites` mixin generates identical output to the CSS template
 	padding: 60px 0 0 18px;
 }
 
+.product__preview__item_order .btn {
+	z-index: 88;
+}
+
 .product__preview__item_name {
 	display: inline-block;
 	vertical-align: middle;

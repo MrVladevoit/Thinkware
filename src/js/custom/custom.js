@@ -101,6 +101,38 @@ $(document).ready(function() {
 	});
 
 /*----------------------------------------
+	MODAL
+----------------------------------------*/
+	var overlay = $('.md-overlay'),
+			trigger = $('.md-trigger'),
+			modal = $('.md-modal'),
+			close = $ ('.md-close');
+
+
+	function removeModal(e){
+
+		e.preventDefault();
+		modal.removeClass('md-show')
+		overlay.removeClass('opened');
+	};
+
+	function openModal(e){
+
+		e.preventDefault();
+
+		var id = $(this).attr('data-modal');
+		$('#' + id + '.md-modal').toggleClass('md-show');
+
+		overlay.addClass('opened');
+	};
+
+
+
+	trigger.on('click',openModal);
+	close.on('click',removeModal);
+	overlay.on('click',removeModal);
+
+/*----------------------------------------
 	PRODUCTS ANIMATE
 ----------------------------------------*/
 

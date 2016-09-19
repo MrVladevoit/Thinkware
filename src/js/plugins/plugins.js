@@ -2,8 +2,6 @@
 @@include('jquery-migrate.js')
 @@include('slick.js')
 @@include('svg4everybody.js')
-@@include('materialize.js')
-@@include('classie.js')
-@@include('modalEffects.js')
 @@include('scrollspy.js')
+@@include('materialize.js')
 /*END JQUERY PLUGINS*/
