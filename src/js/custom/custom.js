@@ -128,10 +128,10 @@ $(document).ready(function() {
 	product.on('click', function(event) {
 		event.preventDefault();
 		// $(this).fadeOut('slow');
-		$(this).fadeOut(300, function () {
-			$(this).remove();
+		$(this).closest('.product__preview').fadeOut(300, function () {
+			$(this).closest('.product__preview').remove();
 		});
-		$(this).prev('.product_hide').slideToggle( 800 );
+		$(this).closest('.product__preview').prev('.product_hide').slideToggle( 800 );
 	});
 });
 
