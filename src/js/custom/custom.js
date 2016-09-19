@@ -83,6 +83,9 @@ $(document).ready(function() {
 		$('.map').css('display', 'block');
 	});
 
+/*----------------------------------------
+	HIDE MAP
+----------------------------------------*/
 
 	$('.map').hide();
 
@@ -97,8 +100,28 @@ $(document).ready(function() {
 		$('.map').slideToggle();
 	});
 
+/*----------------------------------------
+	PRODUCTS ANIMATE
+----------------------------------------*/
+
+	var product = $('.preview'),
+			hidden = $('.product_hide');
+
+	hidden.hide();
+
+	product.on('click', function(event) {
+		event.preventDefault();
+		// $(this).fadeOut('slow');
+		$(this).fadeOut(300, function () {
+			$(this).remove();
+		});
+		$(this).prev('.product_hide').slideToggle( 800 );
+	});
 });
 
+/*----------------------------------------
+	YOUTUBE VIDEOS
+----------------------------------------*/
 jQuery(document).ready(function() {
 	"use strict";
 	$(function() {

@@ -61,12 +61,19 @@
 .contacts_inner-3{
 	margin-top: 118px;
 }
-
+.contacts{
+	position: relative;
+	z-index: 35;
+}
+.map__section{
+	position: relative;
+	z-index: 33;
+}
 .map-close{
-	position: absolute;
-	z-index: 45;
-	left: 115px;
-	bottom: 40px;
+	position: relative;
+	z-index: 3001;
+	left: 17px;
+	bottom: -770px;
 	display:none;
 	&.active{
 		display:block;
