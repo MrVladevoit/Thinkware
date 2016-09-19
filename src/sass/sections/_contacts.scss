@@ -6,6 +6,12 @@
 	background-size: cover;
 	min-height: 596px;
 	color: #fff;
+	@media screen and (max-width:767px) {
+		padding-bottom: 20px;
+	}
+	@media screen and (max-width:600px) {
+		padding-bottom: 40px;
+	}
 }
 .contacts_adress{
 	width: 231px;
@@ -35,6 +41,9 @@
 }
 .contacts__welcome{
 	padding-left: 33px;
+	@media screen and (max-width:767px) {
+		padding-left: 15px;
+	}
 }
 .contacts_text{
 	p{
@@ -54,15 +63,30 @@
 }
 .contacts_inner-1{
 	margin-top: 45px;
+	@media screen and (max-width:600px) {
+		margin-top: 20px;
+	}
 }
 .contacts_inner-2{
 	margin-top: 85px;
+	@media screen and (max-width: 991px) {
+		margin-top: 30px;
+	}
 }
 .contacts_inner-3{
 	margin-top: 118px;
+	@media screen and (max-width:991px) {
+		margin-top: 90px;
+	}
+	@media screen and (max-width:600px) {
+		margin-top: 50px;
+	}
 }
 .map{
 	width: 100%;
 	height: 596px;
+	@media screen and (max-width:767px) {
+		height:400px;
+	}
 }
 /* end contacts*/

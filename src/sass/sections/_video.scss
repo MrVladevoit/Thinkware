@@ -8,6 +8,12 @@
 	@media screen and (max-width: 1199px) {
 		min-height: 650px;
 	}
+	@media screen and (max-width: 991px) {
+		text-align: center;
+		.section_title_white{
+			text-align: center;
+		}
+	}
 }
 .video__item{
 	display: block;
@@ -21,6 +27,16 @@
 	}
 	@media screen and (max-width: 1199px) {
 		width: 465px;
+	}
+	@media screen and (max-width: 991px) {
+		margin: 0 auto 20px;
+		float:none;
+		&:not(:last-child){
+			margin-right: auto;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		width: 90%;
 	}
 }
 

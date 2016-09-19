@@ -1332,6 +1332,8 @@ fieldset[disabled] .btn {
 .wrapper {
 	position: relative;
 	padding-top: 99px;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .stock {
@@ -2030,7 +2032,7 @@ The `sprites` mixin generates identical output to the CSS template
 	display: inline-block;
 	padding-top: 5px;
 	padding-left: 1px;
-	margin-right: 34px;
+	margin-right: 20px;
 }
 
 .header__menu_item {
@@ -2105,12 +2107,6 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* end header */
-
-/* ==========================================================================
-	 FOOTER
-	 ========================================================================== */
-
-/* end footer */
 
 /* ==========================================================================
    MODALS
@@ -2713,10 +2709,6 @@ The `sprites` mixin generates identical output to the CSS template
 	z-index: 4;
 }
 
-.main_slider .container {
-	width: 772px;
-}
-
 .slider__catalog {
 	width: 100%;
 	height: 622px;
@@ -2772,10 +2764,6 @@ The `sprites` mixin generates identical output to the CSS template
 	background: transparent;
 }
 
-.thumbnails.container {
-	width: 800px;
-}
-
 .thumbnails .slick-list {
 	padding: 0 !important;
 }
@@ -2791,16 +2779,6 @@ The `sprites` mixin generates identical output to the CSS template
 .slider__thumbnails_item:focus {
 	outline: none;
 	border: 0;
-}
-
-.slider__thumbnails_item:nth-child(2) .inner,
-.slider__thumbnails_item:nth-child(2) .slider__thumbnails_item_label {
-	margin-left: 32px;
-}
-
-.slider__thumbnails_item:last-child .inner,
-.slider__thumbnails_item:last-child .slider__thumbnails_item_label {
-	margin-left: 63px;
 }
 
 .slider__thumbnails_item:hover .inner__box {
@@ -2964,19 +2942,6 @@ The `sprites` mixin generates identical output to the CSS template
 	margin-right: 13px;
 }
 
-.product__properties_item:hover img {
-	-webkit-transform: translateY(-15px);
-	-ms-transform: translateY(-15px);
-	transform: translateY(-15px);
-	transition: all .5s ease;
-}
-
-.product__properties_item:hover .prop {
-	visibility: visible;
-	opacity: 1;
-	transition: all .5s ease;
-}
-
 .prop {
 	position: absolute;
 	top: -125%;
@@ -3024,12 +2989,6 @@ The `sprites` mixin generates identical output to the CSS template
 	background: #fff;
 	overflow: hidden;
 	box-shadow: 0 0 15px transparent;
-}
-
-.product__preview__item:hover {
-	z-index: 4;
-	border-radius: 10px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
 
 .product__preview__item >div {
@@ -3258,58 +3217,6 @@ The `sprites` mixin generates identical output to the CSS template
 	cursor: pointer;
 }
 
-.advantages__list__item:hover {
-	color: #666;
-	background-color: #fff;
-	transition: all .5s cubic-bezier(.32, .41, .18, 1.36);
-}
-
-.advantages__list__item:hover .advantages__list__item_title {
-	color: #2b2d36;
-}
-
-.advantages__list__item:hover .icon-box {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: -134px -61px;
-	width: 50px;
-	height: 44px;
-}
-
-.advantages__list__item:hover .icon-office {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px 0;
-	width: 48px;
-	height: 44px;
-}
-
-.advantages__list__item:hover .icon-manager {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 -177px;
-	width: 46px;
-	height: 45px;
-}
-
-.advantages__list__item:hover .icon-lawyer {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 0;
-	width: 52px;
-	height: 48px;
-}
-
-.advantages__list__item:hover .icon-system {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: -134px 0;
-	width: 53px;
-	height: 46px;
-}
-
-.advantages__list__item:hover .icon-pay {
-	background-image: url(../images/sprite/sprite.png);
-	background-position: -78px -124px;
-	width: 63px;
-	height: 38px;
-}
-
 .advantages__list__item i {
 	margin-bottom: 4px;
 }
@@ -3405,7 +3312,7 @@ The `sprites` mixin generates identical output to the CSS template
 @media (min-width: 768px) {
 
 .container {
-	width: 750px;
+	width: 715px;
 }
 
 .col-sm-1,
@@ -3639,6 +3546,14 @@ a:hover {
 
 }
 
+@media screen and (min-width: 800px) {
+
+.container {
+	width: 750px;
+}
+
+}
+
 @media (min-width: 992px) {
 
 .container {
@@ -3862,6 +3777,28 @@ a:hover {
 
 .col-md-offset-0 {
 	margin-left: 0;
+}
+
+}
+
+@media screen and (min-width: 992px) {
+
+.main_slider .container {
+	width: 772px;
+}
+
+.thumbnails.container {
+	width: 800px;
+}
+
+.slider__thumbnails_item:nth-child(2) .inner,
+.slider__thumbnails_item:nth-child(2) .slider__thumbnails_item_label {
+	margin-left: 32px;
+}
+
+.slider__thumbnails_item:last-child .inner,
+.slider__thumbnails_item:last-child .slider__thumbnails_item_label {
+	margin-left: 63px;
 }
 
 }
@@ -4120,6 +4057,77 @@ a:hover {
 	display: inline-block;
 }
 
+.product__properties_item:hover img {
+	-webkit-transform: translateY(-15px);
+	-ms-transform: translateY(-15px);
+	transform: translateY(-15px);
+	transition: all .5s ease;
+}
+
+.product__properties_item:hover .prop {
+	visibility: visible;
+	opacity: 1;
+	transition: all .5s ease;
+}
+
+.product__preview__item:hover {
+	z-index: 4;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+}
+
+.advantages__list__item:hover {
+	color: #666;
+	background-color: #fff;
+	transition: all .5s cubic-bezier(.32, .41, .18, 1.36);
+}
+
+.advantages__list__item:hover .advantages__list__item_title {
+	color: #2b2d36;
+}
+
+.advantages__list__item:hover .icon-box {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px -61px;
+	width: 50px;
+	height: 44px;
+}
+
+.advantages__list__item:hover .icon-office {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -202px 0;
+	width: 48px;
+	height: 44px;
+}
+
+.advantages__list__item:hover .icon-manager {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -177px;
+	width: 46px;
+	height: 45px;
+}
+
+.advantages__list__item:hover .icon-lawyer {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 0;
+	width: 52px;
+	height: 48px;
+}
+
+.advantages__list__item:hover .icon-system {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px 0;
+	width: 53px;
+	height: 46px;
+}
+
+.advantages__list__item:hover .icon-pay {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -78px -124px;
+	width: 63px;
+	height: 38px;
+}
+
 }
 
 @media screen and (min-width: 1600px) {
@@ -4197,10 +4205,29 @@ a:hover {
 	width: 80px;
 }
 
+.product__properties_item.active img {
+	-webkit-transform: translateY(-15px);
+	-ms-transform: translateY(-15px);
+	transform: translateY(-15px);
+	transition: all .5s ease;
+}
+
+.product__properties_item.active .prop {
+	visibility: visible;
+	opacity: 1;
+	transition: all .5s ease;
+}
+
 .prop {
 	font-size: 12px;
 	top: -100%;
 	line-height: 16px;
+}
+
+.product__preview__item:active {
+	z-index: 4;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
 
 .product__preview__item_order {
@@ -4241,6 +4268,176 @@ a:hover {
 	padding: 40px 22px;
 }
 
+.advantages__list__item:active {
+	color: #666;
+	background-color: #fff;
+	transition: all .5s cubic-bezier(.32, .41, .18, 1.36);
+}
+
+.advantages__list__item:active .advantages__list__item_title {
+	color: #2b2d36;
+}
+
+.advantages__list__item:active .icon-box {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px -61px;
+	width: 50px;
+	height: 44px;
+}
+
+.advantages__list__item:active .icon-office {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -202px 0;
+	width: 48px;
+	height: 44px;
+}
+
+.advantages__list__item:active .icon-manager {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 -177px;
+	width: 46px;
+	height: 45px;
+}
+
+.advantages__list__item:active .icon-lawyer {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: 0 0;
+	width: 52px;
+	height: 48px;
+}
+
+.advantages__list__item:active .icon-system {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -134px 0;
+	width: 53px;
+	height: 46px;
+}
+
+.advantages__list__item:active .icon-pay {
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -78px -124px;
+	width: 63px;
+	height: 38px;
+}
+
+}
+
+@media screen and (max-width: 991px) {
+
+.header__contacts {
+	display: none;
+}
+
+.md-modal {
+	width: 100%;
+	height: 100%;
+	min-width: 0;
+	overflow-y: auto;
+}
+
+.md-content {
+	height: 100%;
+	border-radius: 0;
+}
+
+.md-modal_close {
+	right: 30px;
+}
+
+.product__view_title {
+	font-size: 55px;
+	line-height: 50px;
+}
+
+.product__view_desc {
+	padding-right: 0;
+}
+
+.product__properties_item {
+	width: 130px;
+}
+
+.prop {
+	background: #fff;
+	padding: 20px;
+	top: -120%;
+}
+
+.product__characteristics_item {
+	width: 33.33%;
+}
+
+.product__preview__item >div {
+	height: auto;
+}
+
+.product__preview__item_image {
+	width: 40%;
+}
+
+.product__preview__item_order {
+	padding-top: 0;
+	width: 60%;
+}
+
+.product__preview__item_name {
+	width: 60%;
+	padding-top: 38px;
+}
+
+.accessorys__item {
+	width: 33.33%;
+}
+
+.video_section {
+	text-align: center;
+}
+
+.video_section .section_title_white {
+	text-align: center;
+}
+
+.video__item {
+	margin: 0 auto 20px;
+	float: none;
+}
+
+.video__item:not(:last-child) {
+	margin-right: auto;
+}
+
+.about {
+	padding-bottom: 50px;
+}
+
+.about_image {
+	margin-bottom: 50px;
+}
+
+.about_text {
+	margin-bottom: 20px;
+}
+
+.advantages {
+	padding-left: 0;
+}
+
+.contacts_inner-2 {
+	margin-top: 30px;
+}
+
+.contacts_inner-3 {
+	margin-top: 90px;
+}
+
+}
+
+@media screen and (max-width: 799px) {
+
+.product__properties_item {
+	width: 127px;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -4251,20 +4448,216 @@ a:active {
 	outline: none;
 }
 
+.header_logo {
+	padding-left: 20px;
+}
+
+.slider__catalog__item {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.slider__catalog__item_title {
+	width: 100%;
+	font-size: 40px;
+	line-height: 60px;
+}
+
+.product__properties {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.product__properties_item {
+	width: 20%;
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.product__properties_item:not(:last-child) {
+	margin-right: 0;
+}
+
+.product__characteristics {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.product__characteristics_item {
+	width: 50%;
+}
+
+.product__preview {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.product__preview__item_image {
+	display: block;
+	float: left;
+}
+
+.product__preview__item_name {
+	padding-top: 10px;
+}
+
+.about {
+	padding-top: 60px;
+	padding-bottom: 32px;
+}
+
+.advantages__list__item {
+	width: 50%;
+	float: left;
+	padding: 15px 22px;
+}
+
+.contacts {
+	padding-bottom: 20px;
+}
+
+.contacts__welcome {
+	padding-left: 15px;
+}
+
+.map {
+	height: 400px;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+.section_title {
+	font-size: 55px;
+	line-height: 55px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.wrapper {
+	padding-top: 55px;
+}
+
+.header {
+	min-height: 55px;
+	padding-top: 15px;
+}
+
+.header__menu {
+	display: none;
+}
+
+.md-modal_description {
+	padding-right: 20px;
+}
+
+.slider__thumbnails_item .inner {
+	width: 120px;
+}
+
+.product__properties_item {
+	width: 25%;
+}
+
+.product__preview__item_name >h2 {
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.video__item {
+	width: 90%;
+}
+
+.contacts {
+	padding-bottom: 40px;
+}
+
+.contacts_inner-1 {
+	margin-top: 20px;
+}
+
+.contacts_inner-3 {
+	margin-top: 50px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+
+.md-modal_close {
+	right: 10px;
+}
+
+.md-modal_image {
+	width: 100%;
+	height: auto;
+}
+
+.md-modal_description {
+	width: 100%;
+	height: auto;
+	padding-left: 20px;
+}
+
+.product__properties_item {
+	width: 50%;
+}
+
+.product__characteristics_item {
+	width: 100%;
+}
+
+.accessorys__item {
+	width: 50%;
+}
+
+.advantages__list__item {
+	width: 100%;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+
+.slider__catalog__item {
+	padding-top: 45px;
+}
+
+.slider__catalog__item_title {
+	font-size: 35px;
+	line-height: 45px;
+}
+
+.slider__thumbnails_item .inner {
+	width: 85px;
+}
+
+.slider__thumbnails_item_label {
+	line-height: 25px;
+}
+
+.accessorys__item {
+	width: 100%;
+}
+
+.item_body {
+	min-height: 240px;
+}
+
+.about_title {
+	font-size: 29px;
+	line-height: 30px;
+	margin: 0 0 15px;
+}
+
 }
 
 @media screen and (max-width: 319px) {
 
 html {
 	width: 320px;
-}
-
-}
-
-@media screen and (max-width: 32em) {
-
-body {
-	font-size: 75%;
 }
 
 }

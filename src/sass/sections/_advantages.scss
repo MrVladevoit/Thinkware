@@ -15,6 +15,9 @@
 	@media screen and (max-width: 1199px) {
 		padding-bottom: 70px;
 	}
+	@media screen and (max-width:991px) {
+		padding-left: 0;
+	}
 }
 .advantages__list__item{
 	height: 265px;
@@ -28,30 +31,68 @@
 		height: 280px;
 		padding: 40px 22px;
 	}
-	&:hover{
-		color: #666;
-		background-color: #fff;
-		transition: all .5s cubic-bezier(0.32, 0.41, 0.18, 1.36);
-		.advantages__list__item_title{
-			color: #2b2d36;
+	@media screen and (max-width:767px) {
+		width: 50%;
+		float:left;
+		padding:15px 22px;
+	}
+	@media screen and (max-width:480px) {
+		width: 100%;
+	}
+	@media screen and (min-width:1200px) {
+		&:hover{
+			color: #666;
+			background-color: #fff;
+			transition: all .5s cubic-bezier(0.32, 0.41, 0.18, 1.36);
+			.advantages__list__item_title{
+				color: #2b2d36;
+			}
+			.icon-box{
+				@include sprite($box-black);
+			}
+			.icon-office{
+				@include sprite($office-black);
+			}
+			.icon-manager{
+				@include sprite($manager-black);
+			}
+			.icon-lawyer{
+				@include sprite($lawyer-black);
+			}
+			.icon-system{
+				@include sprite($system-black);
+			}
+			.icon-pay{
+				@include sprite($pay-black);
+			}
 		}
-		.icon-box{
-			@include sprite($box-black);
-		}
-		.icon-office{
-			@include sprite($office-black);
-		}
-		.icon-manager{
-			@include sprite($manager-black);
-		}
-		.icon-lawyer{
-			@include sprite($lawyer-black);
-		}
-		.icon-system{
-			@include sprite($system-black);
-		}
-		.icon-pay{
-			@include sprite($pay-black);
+	}
+	@media screen and (max-width:1199px) {
+		&:active{
+			color: #666;
+			background-color: #fff;
+			transition: all .5s cubic-bezier(0.32, 0.41, 0.18, 1.36);
+			.advantages__list__item_title{
+				color: #2b2d36;
+			}
+			.icon-box{
+				@include sprite($box-black);
+			}
+			.icon-office{
+				@include sprite($office-black);
+			}
+			.icon-manager{
+				@include sprite($manager-black);
+			}
+			.icon-lawyer{
+				@include sprite($lawyer-black);
+			}
+			.icon-system{
+				@include sprite($system-black);
+			}
+			.icon-pay{
+				@include sprite($pay-black);
+			}
 		}
 	}
 	i{

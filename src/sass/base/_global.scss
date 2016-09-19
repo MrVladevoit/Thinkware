@@ -96,6 +96,12 @@ h5{
 	font-weight: 300;
 	line-height: 69px;
 	padding-left: 15px;
+	@media screen and (max-width:600px) {
+		font-size: 55px;
+		line-height:55px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
 }
 .section_title_white{
 	color: #fff;
@@ -328,6 +334,11 @@ fieldset[disabled] .btn {
 .wrapper{
 	position: relative;
 	padding-top: 99px;
+	width: 100%;
+	overflow-x: hidden;
+	@media screen and (max-width:600px) {
+		padding-top: 55px;
+	}
 }
 
 .stock{

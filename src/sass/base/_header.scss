@@ -23,18 +23,28 @@
 	.icon-smartphone{
 		margin-top: 3px;
 	}
+	@media screen and (max-width: 600px) {
+		min-height: 55px;
+		padding-top: 15px;
+	}
 }
 .header_logo{
 	display:inline-block;
 	margin-top: 2px;
+	@media screen and (max-width:767px) {
+		padding-left: 20px;
+	}
 }
 .header__menu{
 	display:inline-block;
 	padding-top: 5px;
 	padding-left: 1px;
-	margin-right: 34px;
+	margin-right: 20px;
 	@media screen and (max-width: 1199px) {
 		margin-right: 0;
+	}
+	@media screen and (max-width:600px) {
+		display:none;
 	}
 }
 .header__menu_item{
@@ -63,6 +73,9 @@
 .header__contacts{
 	display:inline-block;
 	padding-left: 29px;
+	@media screen and (max-width: 991px) {
+		display: none;
+	}
 }
 .header__contacts__local{
 	display:block;

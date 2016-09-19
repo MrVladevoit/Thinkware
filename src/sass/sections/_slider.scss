@@ -5,7 +5,9 @@
 	position: relative;
 	z-index: 4;
 	.container{
-		width: 772px;
+		@media screen and (min-width: 992px) {
+			width: 772px;
+		}
 	}
 }
 .slider__catalog{
@@ -52,6 +54,13 @@
 	@media screen and (max-width: 1199px) {
 		padding-top: 80px;
 	}
+	@media screen and (max-width:767px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media screen and (max-width:360px) {
+		padding-top: 45px;
+	}
 }
 .slider__catalog__item_title{
 	margin-top: 31px;
@@ -62,6 +71,15 @@
 	font-weight: 600;
 	line-height: 69px;
 	text-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+	@media screen and (max-width:767px) {
+		width: 100%;
+		font-size: 40px;
+		line-height:60px;
+	}
+	@media screen and (max-width:360px) {
+		font-size: 35px;
+		line-height:45px;
+	}
 }
 .thumbnails{
 	position: absolute;
@@ -72,7 +90,9 @@
 	margin: 0 auto;
 	background:transparent;
 	&.container{
-		width: 800px;
+		@media screen and (min-width: 992px) {
+			width: 800px;
+		}
 	}
 	.slick-list{
 		padding: 0 !important;
@@ -90,13 +110,17 @@
 	&:nth-child(2){
 		.inner,
 		.slider__thumbnails_item_label{
-			margin-left: 32px;
+			@media screen and (min-width: 992px) {
+				margin-left: 32px;
+			}
 		}
 	}
 	&:last-child{
 		.inner,
 		.slider__thumbnails_item_label{
-			margin-left: 63px;
+			@media screen and (min-width: 992px) {
+				margin-left: 63px;
+			}
 		}
 	}
 	&:hover{
@@ -110,6 +134,12 @@
 		width: 170px;
 		height:90px;
 		overflow:hidden;
+		@media screen and (max-width:600px) {
+			width: 120px;
+		}
+		@media screen and (max-width: 360px) {
+			width: 85px;
+		}
 	}
 }
 .inner__box{
@@ -157,5 +187,8 @@
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 35px;
+	@media screen and (max-width:360px) {
+		line-height:25px;
+	}
 }
 /*end slider*/

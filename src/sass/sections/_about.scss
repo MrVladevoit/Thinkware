@@ -4,6 +4,13 @@
 .about{
 	padding-top: 124px;
 	padding-bottom: 115px;
+	@media screen and (max-width: 991px) {
+		padding-bottom: 50px;
+	}
+	@media screen and (max-width: 767px) {
+		padding-top: 60px;
+		padding-bottom: 32px;
+	}
 }
 .about_image{
 	display: inline-block;
@@ -11,6 +18,9 @@
 	width: 30%;
 	float: left;
 	text-align: center;
+	@media screen and (max-width: 991px) {
+		margin-bottom: 50px;
+	}
 }
 .about_title{
 	font-weight: 700;
@@ -20,6 +30,11 @@
 	text-transform: uppercase;
 	@media screen and (max-width: 1199px) {
 		font-size: 40px;
+	}
+	@media screen and (max-width:360px) {
+		font-size: 29px;
+		line-height: 30px;
+		margin: 0 0 15px;
 	}
 }
 .about_text{
@@ -35,6 +50,9 @@
 	}
 	span{
 		font-weight: 600;
+	}
+	@media screen and (max-width: 991px) {
+		margin-bottom: 20px;
 	}
 }
 /* end about */

@@ -7,9 +7,14 @@
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-width: 800px) {
+  .container{
+    width: 750px;
+  }
+}
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 715px;
   }
 }
 @media (min-width: 992px) {

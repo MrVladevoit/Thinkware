@@ -24,12 +24,19 @@
 	margin-top: 15px;
 	margin-bottom: 30px;
 	padding-left: 5px;
+	@media screen and (max-width: 991px) {
+		font-size: 55px;
+		line-height:50px;
+	}
 }
 .product__view_desc{
 	padding-left: 5px;
 	padding-right: 90px;
 	padding-bottom: 26px;
 	vertical-align: middle;
+	@media screen and (max-width: 991px) {
+		padding-right: 0;
+	}
 }
 .product__view__order{
 	display: inline-block;
@@ -60,6 +67,10 @@
 .product__properties{
 	display:block;
 	width: 100%;
+	@media screen and (max-width:767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 .product__properties_item{
 	position: relative;
@@ -69,6 +80,24 @@
 	@media screen and (max-width: 1199px) {
 		width: 80px;
 	}
+	@media screen and (max-width: 991px) {
+		width: 130px;
+	}
+	@media screen and (max-width:799px) {
+		width: 127px;
+	}
+	@media screen and (max-width:767px) {
+		width: 20%;
+		display:block;
+		float:left;
+		margin-bottom: 10px;
+	}
+	@media screen and (max-width:600px) {
+		width: 25%;
+	}
+	@media screen and (max-width:480px) {
+		width: 50%;
+	}
 	img{
 		position: relative;
 		max-width: 100%;
@@ -77,16 +106,34 @@
 	}
 	&:not(:last-child){
 		margin-right: 13px;
-	}
-	&:hover{
-		img{
-			transform: translateY(-15px);
-			transition: all .5s ease;
+		@media screen and (max-width:767px) {
+			margin-right: 0;
 		}
-		.prop{
-			visibility: visible;
-			opacity: 1;
-			transition: all .5s ease;
+	}
+	@media screen and (min-width:1200px) {
+		&:hover{
+			img{
+				transform: translateY(-15px);
+				transition: all .5s ease;
+			}
+			.prop{
+				visibility: visible;
+				opacity: 1;
+				transition: all .5s ease;
+			}
+		}
+	}
+	@media screen and (max-width:1199px) {
+		&.active{
+			img{
+				transform: translateY(-15px);
+				transition: all .5s ease;
+			}
+			.prop{
+				visibility: visible;
+				opacity: 1;
+				transition: all .5s ease;
+			}
 		}
 	}
 }
@@ -106,9 +153,18 @@
 		top: -100%;
 		line-height: 16px;
 	}
+	@media screen and (max-width: 991px) {
+		background: #fff;
+		padding: 20px;
+		top: -120%;
+	}
 }
 .product__characteristics{
 	padding-top: 39px;
+	@media screen and (max-width:767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 .product__characteristics_item{
 	display:block;
@@ -117,6 +173,15 @@
 	padding-right: 20px;
 	margin-bottom: 16px;
 	min-height: 80px;
+	@media screen and (max-width: 991px) {
+		width: 33.33%;
+	}
+	@media screen and (max-width:767px) {
+		width: 50%;
+	}
+	@media screen and (max-width:480px) {
+		width: 100%;
+	}
 }
 .character_title{
 	font-weight: 600;
@@ -124,7 +189,12 @@
 /* ==========================================================================
 	 PREVIEW
 	 ========================================================================== */
-
+.product__preview{
+	@media screen and (max-width:767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 .product__preview__item{
 	position: relative;
 	z-index: 99;
@@ -138,16 +208,28 @@
 	background:#fff;
 	overflow: hidden;
 	box-shadow: 0 0 15px transparent;
-	&:hover{
-		z-index: 4;
-		border-radius: 10px;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	@media screen and (min-width: 1200px) {
+		&:hover{
+			z-index: 4;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+		}
+	}
+	@media screen and (max-width: 1199px) {
+		&:active{
+			z-index: 4;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+		}
 	}
 	>div{
 		display:inline-block;
 		vertical-align:middle;
 		height:100%;
 		min-height: 1px;
+		@media screen and (max-width: 991px) {
+			height:auto;
+		}
 	}
 	.preview{
 		position: absolute;
@@ -163,6 +245,13 @@
 	img{
 		vertical-align:middle;
 	}
+	@media screen and (max-width: 991px) {
+		width: 40%;
+	}
+	@media screen and (max-width:767px) {
+		display:block;
+		float:left;
+	}
 }
 .product__preview__item_order{
 	float:right;
@@ -173,6 +262,10 @@
 	@media screen and (max-width: 1199px) {
 		padding: 70px 0 0 0px;
 	}
+	@media screen and (max-width: 991px) {
+		padding-top: 0;
+		width: 60%;
+	}
 }
 .product__preview__item_name{
 	display:inline-block;
@@ -181,9 +274,20 @@
 	padding: 60px 0px 0px 3px;
 	>h2{
 		margin: 0;
+		@media screen and (max-width:600px) {
+			font-size: 36px;
+			line-height:36px;
+		}
 	}
 	@media screen and (max-width: 1199px) {
 		padding: 70px 0 0 0px;
+	}
+	@media screen and (max-width: 991px) {
+		width: 60%;
+		padding-top: 38px;
+	}
+	@media screen and (max-width: 767px) {
+		padding-top: 10px;
 	}
 }
 .product__preview__item_order_price{

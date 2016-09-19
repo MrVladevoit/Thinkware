@@ -83,6 +83,11 @@ $(document).ready(function() {
 		$('.map').css('display', 'block');
 	});
 
+	$('.product__properties_item').click(function(event) {
+		$('.product__properties_item').removeClass('active');
+		$(this).toggleClass('active');
+	});
+
 
 /*----------------------------------------
 	MODAL
