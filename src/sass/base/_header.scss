@@ -33,6 +33,9 @@
 	padding-top: 5px;
 	padding-left: 1px;
 	margin-right: 34px;
+	@media screen and (max-width: 1199px) {
+		margin-right: 0;
+	}
 }
 .header__menu_item{
 	display:inline-block;
@@ -49,6 +52,12 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		letter-spacing: 1px;
+	}
+}
+.header__menu_btn{
+	display:none;
+	@media screen and (min-width: 1200px) {
+		display:inline-block;
 	}
 }
 .header__contacts{

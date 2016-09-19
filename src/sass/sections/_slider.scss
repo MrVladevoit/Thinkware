@@ -13,6 +13,9 @@
 	height: 622px;
 	background: transparent;
 	overflow: hidden;
+	@media screen and (max-width: 1199px) {
+		height:550px;
+	}
 }
 .slick-list{
 	height: 100%;
@@ -46,6 +49,9 @@
 }
 .slider__catalog__item{
 	padding: 138px 0 0 0;
+	@media screen and (max-width: 1199px) {
+		padding-top: 80px;
+	}
 }
 .slider__catalog__item_title{
 	margin-top: 31px;
@@ -95,9 +101,8 @@
 	}
 	&:hover{
 		.inner__box{
-			height:100%;
 			bottom: 0;
-			transition: all .25s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0ms;
+			transition: all .25s ease;
 		}
 	}
 	.inner{
@@ -110,11 +115,11 @@
 .inner__box{
 	overflow: hidden;
 	position: absolute;
-	height: 0;
+	height: 100%;
 	width: 100%;
 	bottom: -100%;
 	background-color: $primary-color;
-	transition: all .18s cubic-bezier(0.600, -0.280, 0.735, 0.045) 0ms;
+	transition: all .18s ease;
 	img{
 		max-width: 100%;
 		height:auto;

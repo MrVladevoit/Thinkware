@@ -12,6 +12,9 @@
 	.section_title{
 		margin-bottom: 42px;
 	}
+	@media screen and (max-width: 1199px) {
+		padding-bottom: 70px;
+	}
 }
 .advantages__list__item{
 	height: 265px;
@@ -21,6 +24,10 @@
 	background-color: transparent;
 	border-radius: 10px;
 	cursor: pointer;
+	@media screen and (max-width: 1199px) {
+		height: 280px;
+		padding: 40px 22px;
+	}
 	&:hover{
 		color: #666;
 		background-color: #fff;

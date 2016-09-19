@@ -18,6 +18,9 @@
 	line-height: 47px;
 	color: $third-color;
 	text-transform: uppercase;
+	@media screen and (max-width: 1199px) {
+		font-size: 40px;
+	}
 }
 .about_text{
 	display: inline-block;
