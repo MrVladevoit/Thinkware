@@ -1364,6 +1364,16 @@ button:focus {
 /* File Input
    ========================================================================== */
 
+input {
+	outline: none;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+	-webkit-text-fill-color: #999 !important; /* цвет текста */
+	color: #999 !important; /* цвет текста */
+}
+
 .file-field {
 	position: relative;
 }
@@ -1720,6 +1730,7 @@ textarea.materialize-textarea +label:after {
 	color: #2b2d36;
 	position: absolute;
 	top: .8rem;
+	left: 0;
 	font-size: 18px;
 	cursor: text;
 	transition: .2s ease-out;
@@ -3000,6 +3011,8 @@ The `sprites` mixin generates identical output to the CSS template
 
 .product__preview__item .preview {
 	position: absolute;
+	left: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 2;

@@ -367,6 +367,12 @@ button:focus {
 /* File Input
    ========================================================================== */
 
+	input {outline: none;}
+	input:-webkit-autofill {
+	    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+	    -webkit-text-fill-color: #999 !important; /* цвет текста */
+	    color: #999 !important; /* цвет текста */
+	}
 .file-field {
   position: relative;
 
@@ -545,6 +551,7 @@ textarea.materialize-textarea {
     color: $input-border-color;
     position: absolute;
     top: 0.8rem;
+    left:0px;
     font-size: 18px;
     cursor: text;
     transition: .2s ease-out;

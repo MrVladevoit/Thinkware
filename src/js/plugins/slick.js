@@ -2197,7 +2197,7 @@
 
             $('.slider__thumbnails_item').find('.inner__line_progress').stop().css({"width" : "0%"})
 
-            $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').stop().animate({width: "100%"}, 4000);
+            $('.slider__thumbnails_item.slick-current').find('.inner__line_progress').stop().animate({width: "100%"}, 30000);
 
         if (_.options.centerMode === true) {
 

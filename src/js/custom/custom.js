@@ -36,7 +36,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 30000,
 		speed: 300,
 		pauseOnHover:false,
 		asNavFor: '.slider__thumbnails'
