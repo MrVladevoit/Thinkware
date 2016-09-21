@@ -156,11 +156,11 @@ jQuery(document).ready(function() {
 
 					$(document).delegate('#'+this.id, 'click', function() {
 							// создаем iframe со включенной опцией autoplay
-							var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+							var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1 ";
 							if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
 
 							// Высота и ширина iframe должны быть такими же, как и у родительского блока
-							var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+							var iframe = $('<iframe/>', {'frameborder': '0' , 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height(), 'allowfullscreen': 'allowfullscreen' })
 
 							// Заменяем миниатюру HTML5 плеером с YouTube
 							$(this).replaceWith(iframe);
@@ -198,17 +198,17 @@ jQuery(document).ready(function() {
 
 
 			$(".map-open").click(function () {
-				$(this).toggleClass('opened');
-				$('.map-close').toggleClass('active');
-				$('.map').slideToggle(300, function(){
+				$(this).addClass('opened');
+				$('.map-close').addClass('active');
+				$('.map').slideDown(300, function(){
 					google.maps.event.trigger(map, "resize");
 					map.setCenter(myLatlng);
 				});
 
 			});
 			$(".map-close").click(function () {
-				$('.map-open').toggleClass('opened');
-				$('.map-close').toggleClass('active');
+				$('.map-open').removeClass('opened');
+				$('.map-close').removeClass('active');
 				$('.map').slideToggle(300, function(){
 					google.maps.event.trigger(map, "resize");
 					map.setCenter(myLatlng);

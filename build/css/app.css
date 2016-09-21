@@ -2926,9 +2926,13 @@ The `sprites` mixin generates identical output to the CSS template
 
 .rub:after {
 	position: absolute;
-	content: "-";
-	bottom: -11px;
-	right: 10px;
+	content: "";
+	bottom: 20px;
+	right: 7px;
+	display: inline-block;
+	width: 17px;
+	height: 4px;
+	background-color: #2b2d36;
 }
 
 /* ==========================================================================
@@ -3058,6 +3062,11 @@ The `sprites` mixin generates identical output to the CSS template
 .product__preview__item_order_price {
 	font-size: 44px;
 	margin-right: 45px;
+}
+
+.product__preview__item_order_price .rub:after {
+	bottom: 19px;
+	right: 5px;
 }
 
 /*end products*/
@@ -3243,6 +3252,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .advantages__list__item_title {
 	font-weight: 600;
+	margin-bottom: 5px;
 }
 
 /* end advantages */
