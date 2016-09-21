@@ -2117,6 +2117,13 @@ The `sprites` mixin generates identical output to the CSS template
 	color: #fff;
 }
 
+.header__contacts__text_local >a {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 14px;
+	text-transform: capitalize;
+}
+
 /* end header */
 
 /* ==========================================================================
@@ -3313,6 +3320,26 @@ The `sprites` mixin generates identical output to the CSS template
 
 .contacts_inner-3 {
 	margin-top: 118px;
+}
+
+.contacts__map {
+	position: relative;
+}
+
+.contacts__map .map-close {
+	opacity: 0;
+	visibility: 0;
+	position: absolute;
+	z-index: 5000;
+	top: auto;
+	bottom: 41px;
+	left: 223px;
+}
+
+.contacts__map .map-close.active {
+	visibility: 1;
+	opacity: 1;
+	transition: all 1s;
 }
 
 .map {

@@ -4616,24 +4616,72 @@ $(document).ready(function() {
 jQuery(document).ready(function() {
 	"use strict";
 	$(function() {
-	    $(".youtube").each(function() {
-	        // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-	        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+			$(".youtube").each(function() {
+					// Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+					$(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
-	        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-	        $(this).append($('<div/>', {'class': 'play'}));
+					// Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+					$(this).append($('<div/>', {'class': 'play'}));
 
-	        $(document).delegate('#'+this.id, 'click', function() {
-	            // создаем iframe со включенной опцией autoplay
-	            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
-	            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+					$(document).delegate('#'+this.id, 'click', function() {
+							// создаем iframe со включенной опцией autoplay
+							var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+							if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
 
-	            // Высота и ширина iframe должны быть такими же, как и у родительского блока
-	            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+							// Высота и ширина iframe должны быть такими же, как и у родительского блока
+							var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
 
-	            // Заменяем миниатюру HTML5 плеером с YouTube
-	            $(this).replaceWith(iframe);
-	        });
-	    });
+							// Заменяем миниатюру HTML5 плеером с YouTube
+							$(this).replaceWith(iframe);
+					});
+			});
 	 });
 });
+
+/*----------------------------------------
+	HIDE MAP
+----------------------------------------*/
+
+	$('.map').hide();
+
+	$(function () {
+			var myLatlng = new google.maps.LatLng( 59.890438, 30.440293);
+			//create map options object
+			var mapOptions = {
+				zoom: 15,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				// This is where you would paste any style found on Snazzy Maps.
+				styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}]
+			};
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+			var image = 'images/marker.svg';
+
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng( 59.890438, 30.440293),
+				map: map,
+				icon: image,
+				title: 'thinkware'
+			});
+
+
+			$(".map-open").click(function () {
+				$(this).toggleClass('opened');
+				$('.map-close').toggleClass('active');
+				$('.map').slideToggle(300, function(){
+					google.maps.event.trigger(map, "resize");
+					map.setCenter(myLatlng);
+				});
+
+			});
+			$(".map-close").click(function () {
+				$('.map-open').toggleClass('opened');
+				$('.map-close').toggleClass('active');
+				$('.map').slideToggle(300, function(){
+					google.maps.event.trigger(map, "resize");
+					map.setCenter(myLatlng);
+				});
+			});
+
+	});

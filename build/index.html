@@ -54,7 +54,7 @@
 					<div class="header__contacts">
 						<div class="header__contacts__local">
 							<div class="header__contacts__icon"><i class="icon icon-local"></i></div>
-							<div class="header__contacts__text">г. Санкт-Петербург, пр. Обуховской обороны, дом 123А</div>
+							<div class="header__contacts__text header__contacts__text_local"><a href="#contacts-map" class="scroll map-open" title="">г. Санкт-Петербург, пр. Обуховской обороны, дом 123А</a></div>
 						</div>
 						<div class="header__contacts__tel">
 							<div class="header__contacts__icon"><i class="icon icon-smartphone"></i></div>
@@ -1045,6 +1045,7 @@
 					<a href="tel:+78123310685" title="позвонить">+7 (812) 331-06-85</a>
 					<a href="tel:+79520950100" title="позвонить">+7 (952) 095-01-00</a>
 				</div>
+				<div class="contacts_map contacts_inner-3"><button class="btn btn-light map-open" type="button">Адрес на карте</button></div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-5 contacts__welcome">
 				<div class="contacts_title contacts_inner-1">Добро пожаловать!</div>
@@ -1058,38 +1059,9 @@
 	</div>
 </section>
 <!-- map -->
-<section id="contacts__map" class="contacts__map clearfix">
-	<div class="maps clearfix"">
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<script type="text/javascript">
-			// When the window has finished loading create our google map below
-			google.maps.event.addDomListener(window, 'load', init);
-
-			function init() {
-			var mapOptions = {
-			zoom: 16,
-			center: new google.maps.LatLng( 59.890422, 30.43995), // Киев Кулибина 11а
-			// This is where you would paste any style found on Snazzy Maps.
-			styles: [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#fcfcfc"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#dddddd"}]}]
-			};
-
-			// Get the HTML DOM element that will contain your map
-			// We are using a div with id="map" seen below in the <body>
-			var mapElement = document.getElementById('map');
-
-			var map = new google.maps.Map(mapElement, mapOptions);
-			// Let's also add a marker while we're at it
-			var image = 'images/marker.svg';
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng( 59.890422, 30.43995),
-					map: map,
-					icon: image,
-					title: 'Snazzy!'
-				});
-			}
-		</script>
-		<div id="map" class="map"></div>
-	</div>
+<section id="contacts-map" class="contacts__map clearfix">
+	<div id="map" class="map"></div>
+	<button class="btn btn-dark map-close" type="button">Скрыть карту</button>
 </section>
 	</div>
 	<!-- footer -->
@@ -1132,6 +1104,8 @@
 <div class="md-overlay"></div>
 	<!-- jquery -->
 	<script src="js/jquery.min.js"></script>
+	<!-- google map -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<!-- app js -->
 	<script src="js/app.min.js"></script>
 </body>

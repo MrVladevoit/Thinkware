@@ -82,6 +82,23 @@
 		margin-top: 50px;
 	}
 }
+.contacts__map{
+	position: relative;
+	.map-close{
+		opacity: 0;
+		visibility:0;
+		position: absolute;
+		z-index: 5000;
+		top:auto;
+		bottom: 41px;
+		left: 223px;
+		&.active{
+			visibility:1;
+			opacity: 1;
+			transition: all 1s;
+		}
+	}
+}
 .map{
 	width: 100%;
 	height: 596px;
