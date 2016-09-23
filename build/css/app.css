@@ -1915,7 +1915,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px -59px;
+	background-position: -202px 0;
 	width: 48px;
 	height: 44px;
 }
@@ -1924,7 +1924,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px 0;
+	background-position: -202px -59px;
 	width: 48px;
 	height: 44px;
 }
@@ -1933,7 +1933,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 -177px;
+	background-position: -61px -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -1942,7 +1942,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -61px -177px;
+	background-position: 0 -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -2017,6 +2017,15 @@ The `sprites` mixin generates identical output to the CSS template
 	background-position: -158px -177px;
 	width: 19px;
 	height: 30px;
+}
+
+.icon-rub-sm {
+	width: 12px;
+	height: 17px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -265px -64px;
+	width: 12px;
+	height: 17px;
 }
 
 /* end icons*/
@@ -2958,65 +2967,34 @@ The `sprites` mixin generates identical output to the CSS template
 	background-color: #2b2d36;
 }
 
-/* ==========================================================================
-	 FLIP EFFECTS
-	 ========================================================================== */
-
-/* entire container, keeps perspective */
-
-.flip-container {
-	-webkit-perspective: 1000px;
-	perspective: 1000px;
-}
-
-/* flip the pane when hovered */
-
-.flip-container:hover .flipper,
-.flip-container.hover .flipper {
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
-
-.flip-container,
-.front,
-.back {
-	max-width: 100%;
-	height: auto;
-}
-
-/* flip speed goes here */
-
-.flipper {
-	transition: .6s;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+.product__view_image {
 	position: relative;
 }
 
-/* hide back of pane during swap */
+.product__view_image .front {
+	position: relative;
+	z-index: 2;
+	opacity: 1;
+}
 
-.front,
-.back {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+.product__view_image .back {
 	position: absolute;
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: auto;
+	z-index: 1;
+	opacity: 0;
 }
 
-/* front pane, placed above back */
-
-.front {
-	z-index: 2; /* for firefox 31 */
-	-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+.product__view_image:hover .front {
+	z-index: 1;
+	opacity: 0;
 }
 
-/* back, initially hidden pane */
-
-.back {
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+.product__view_image:hover .back {
+	z-index: 2;
+	opacity: 1;
 }
 
 /* ==========================================================================
@@ -3050,7 +3028,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .prop {
 	position: absolute;
-	top: -125%;
+	top: -90%;
 	left: 0;
 	display: inline-block;
 	font-weight: 600;
@@ -4234,14 +4212,14 @@ a:hover {
 
 .advantages__list__item:hover .icon-office {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px 0;
+	background-position: -202px -59px;
 	width: 48px;
 	height: 44px;
 }
 
 .advantages__list__item:hover .icon-manager {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -61px -177px;
+	background-position: 0 -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -4426,14 +4404,14 @@ a:hover {
 
 .advantages__list__item:active .icon-office {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px 0;
+	background-position: -202px -59px;
 	width: 48px;
 	height: 44px;
 }
 
 .advantages__list__item:active .icon-manager {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -61px -177px;
+	background-position: 0 -177px;
 	width: 46px;
 	height: 45px;
 }

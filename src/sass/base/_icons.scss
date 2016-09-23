@@ -100,4 +100,9 @@
 	height: 30px;
 	@include sprite($rub-s);
 }
+.icon-rub-sm{
+	width: 12px;
+	height: 17px;
+	@include sprite($rub-sm);
+}
 /* end icons*/
