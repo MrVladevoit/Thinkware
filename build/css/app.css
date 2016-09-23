@@ -1852,7 +1852,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 23px;
 	height: 18px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -164px -177px;
+	background-position: -265px 0;
 	width: 23px;
 	height: 18px;
 }
@@ -1861,7 +1861,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 16px;
 	height: 16px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -202px -177px;
+	background-position: -265px -33px;
 	width: 16px;
 	height: 16px;
 }
@@ -1870,7 +1870,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 25px;
 	height: 17px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -122px -177px;
+	background-position: -192px -177px;
 	width: 27px;
 	height: 19px;
 }
@@ -1933,7 +1933,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: -61px -177px;
+	background-position: 0 -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -1942,7 +1942,7 @@ The `sprites` mixin generates identical output to the CSS template
 	width: 50px;
 	height: 44px;
 	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 -177px;
+	background-position: -61px -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -1999,6 +1999,24 @@ The `sprites` mixin generates identical output to the CSS template
 	background-position: -78px -124px;
 	width: 63px;
 	height: 38px;
+}
+
+.icon-rub {
+	width: 21px;
+	height: 33px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -122px -177px;
+	width: 21px;
+	height: 33px;
+}
+
+.icon-rub-s {
+	width: 19px;
+	height: 30px;
+	background-image: url(../images/sprite/sprite.png);
+	background-position: -158px -177px;
+	width: 19px;
+	height: 30px;
 }
 
 /* end icons*/
@@ -3103,6 +3121,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 .product__preview__item_image img {
 	vertical-align: middle;
+	max-width: 255px;
 }
 
 .product__preview__item_order {
@@ -4222,7 +4241,7 @@ a:hover {
 
 .advantages__list__item:hover .icon-manager {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 -177px;
+	background-position: -61px -177px;
 	width: 46px;
 	height: 45px;
 }
@@ -4414,7 +4433,7 @@ a:hover {
 
 .advantages__list__item:active .icon-manager {
 	background-image: url(../images/sprite/sprite.png);
-	background-position: 0 -177px;
+	background-position: -61px -177px;
 	width: 46px;
 	height: 45px;
 }
