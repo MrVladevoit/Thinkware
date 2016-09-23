@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-	/*FOR SVG*/
-		svg4everybody({});
 	/*----------------------------------------
 		MATERIAL BUTTON
 	----------------------------------------*/
