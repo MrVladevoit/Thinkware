@@ -51,6 +51,9 @@
 }
 .slider__catalog__item{
 	padding: 138px 0 0 0;
+	&:focus{
+		outline:none;
+	}
 	@media screen and (max-width: 1199px) {
 		padding-top: 80px;
 	}

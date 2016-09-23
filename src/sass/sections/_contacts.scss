@@ -84,16 +84,19 @@
 }
 .contacts__map{
 	position: relative;
+	.container{
+		position: relative;
+	}
 	.map-close{
 		opacity: 0;
-		visibility:0;
+		visibility:hidden;
 		position: absolute;
 		z-index: 5000;
 		top:auto;
 		bottom: 41px;
-		left: 223px;
+		left: 15px;
 		&.active{
-			visibility:1;
+			visibility:visible;
 			opacity: 1;
 			transition: all 1s;
 		}

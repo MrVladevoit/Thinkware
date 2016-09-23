@@ -1,5 +1,6 @@
 /node_modules/*
 /libs/макеты/*
 /libs/plugins/*
+/libs/products/*
 /libs/fonts/*
 /temp/*

@@ -15,7 +15,7 @@
 	padding: 60px 0px 0px;
 }
 .product__view{
-	padding-bottom: 56px;
+	padding-bottom: 70px;
 }
 .product__view_title{
 	font-size: 75px;
@@ -43,6 +43,7 @@
 	vertical-align: middle;
 	width: 100%;
 	padding-left: 5px;
+	margin-bottom: 20px;
 }
 .price{
 	display: inline-block;
@@ -65,6 +66,53 @@
 		background-color: #2b2d36;
 	}
 }
+/* ==========================================================================
+	 FLIP EFFECTS
+	 ========================================================================== */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	max-width:100%;
+	height: auto;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+
 /* ==========================================================================
 	 PROPERTIES
 	 ========================================================================== */

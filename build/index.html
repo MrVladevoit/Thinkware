@@ -146,9 +146,18 @@
 	<div class="container">
 		<div class="row">
 			<div class="product__view clearfix">
-				<div class="col-sm-4 col-md-6">
-					<div class="product__view_image">
-						<img src="images/thinkware-X350.jpg" alt="thinkware-X350">
+				<div class="col-sm-4 col-md-6 clearfix">
+					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+						<div class="flipper">
+							<div class="front">
+								<!-- front content -->
+								<img src="images/thinkware-X350-front.jpg" alt="thinkware-X350">
+							</div>
+							<div class="back">
+								<!-- back content -->
+								<img src="images/thinkware-X350-back.jpg" alt="thinkware-X350">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-8 col-md-6">
@@ -1045,7 +1054,7 @@
 					<a href="tel:+78123310685" title="позвонить">+7 (812) 331-06-85</a>
 					<a href="tel:+79520950100" title="позвонить">+7 (952) 095-01-00</a>
 				</div>
-				<div class="contacts_map contacts_inner-3"><button class="btn btn-light map-open" type="button">Адрес на карте</button></div>
+				<div class="contacts_map contacts_inner-3"><a href="#contacts-map" class="btn btn-light map-open scroll" type="button">Адрес на карте</a></div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-5 contacts__welcome">
 				<div class="contacts_title contacts_inner-1">Добро пожаловать!</div>
@@ -1061,7 +1070,11 @@
 <!-- map -->
 <section id="contacts-map" class="contacts__map clearfix">
 	<div id="map" class="map"></div>
-	<button class="btn btn-dark map-close" type="button">Скрыть карту</button>
+	<div class="container">
+		<div class="row">
+			<button class="btn btn-dark map-close" type="button">Скрыть карту</button>
+		</div>
+	</div>
 </section>
 	</div>
 	<!-- footer -->
