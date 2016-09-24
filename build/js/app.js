@@ -4497,32 +4497,32 @@ $(document).ready(function() {
 /*----------------------------------------
 	PRODUCTS ORDER
 ----------------------------------------*/
-	var button = $('.btn-product'),
-			buttonAccess = $('.btn-access'),
-			title = $('#modal-title'),
-			image = $('#modal-image');
+	// var button = $('.btn-product'),
+	// 		buttonAccess = $('.btn-access'),
+	// 		title = $('#modal-title'),
+	// 		image = $('#modal-image');
 
-	button.on('click', function(event) {
-		event.preventDefault();
+	// button.on('click', function(event) {
+	// 	event.preventDefault();
 
-		var name = $(this).attr('data-name'),
-				dataImage = $(this).attr('data-image');
+	// 	var name = $(this).attr('data-name'),
+	// 			dataImage = $(this).attr('data-image');
 
-		title.text(name);
-		image.prop('src','images/thinkware-'+ dataImage +'-front.jpg');
+	// 	title.text(name);
+	// 	image.prop('src','images/thinkware-'+ dataImage +'-front.jpg');
 
-	});
+	// });
 
-	buttonAccess.on('click', function(event) {
-		event.preventDefault();
+	// buttonAccess.on('click', function(event) {
+	// 	event.preventDefault();
 
-		var name = $(this).attr('data-name'),
-				dataImage = $(this).attr('data-image');
+	// 	var name = $(this).attr('data-name'),
+	// 			dataImage = $(this).attr('data-image');
 
-		title.text(name);
-		image.prop('src','images/'+ dataImage +'.jpg');
+	// 	title.text(name);
+	// 	image.prop('src','images/'+ dataImage +'.jpg');
 
-	});
+	// });
 
 
 /*----------------------------------------
@@ -4604,16 +4604,16 @@ jQuery(document).ready(function() {
 			$(".map-open").click(function () {
 				$(this).addClass('opened');
 				$('.map-close').addClass('active');
-				$('.map').slideDown(300, function(){
+				$('.map').slideDown(200 , function(){
 					google.maps.event.trigger(map, "resize");
 					map.setCenter(myLatlng);
 				});
-
 			});
+
 			$(".map-close").click(function () {
 				$('.map-open').removeClass('opened');
 				$('.map-close').removeClass('active');
-				$('.map').slideToggle(300, function(){
+				$('.map').slideUp( 1000, function(){
 					google.maps.event.trigger(map, "resize");
 					map.setCenter(myLatlng);
 				});
