@@ -119,6 +119,37 @@ $(document).ready(function() {
 	overlay.on('click',removeModal);
 
 /*----------------------------------------
+	PRODUCTS ORDER
+----------------------------------------*/
+	var button = $('.btn-product'),
+			buttonAccess = $('.btn-access'),
+			title = $('#modal-title'),
+			image = $('#modal-image');
+
+	button.on('click', function(event) {
+		event.preventDefault();
+
+		var name = $(this).attr('data-name'),
+				dataImage = $(this).attr('data-image');
+
+		title.text(name);
+		image.prop('src','images/thinkware-'+ dataImage +'-front.jpg');
+
+	});
+
+	buttonAccess.on('click', function(event) {
+		event.preventDefault();
+
+		var name = $(this).attr('data-name'),
+				dataImage = $(this).attr('data-image');
+
+		title.text(name);
+		image.prop('src','images/'+ dataImage +'.jpg');
+
+	});
+
+
+/*----------------------------------------
 	PRODUCTS ANIMATE
 ----------------------------------------*/
 
